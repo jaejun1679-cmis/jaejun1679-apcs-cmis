@@ -16,10 +16,10 @@ public class AddNumber{
     int Mul = number1 * number2;
     int MDiv = number1 % number2;
     
-    System.out.println("Numbers when added: " + Add);
-    System.out.println("Numbers when subtracted: " + Sub);
-    System.out.println("Numbers when added: " + Div);
-    System.out.println("Numbers when added: " + Mul);
-    System.out.println("Numbers when added: " + MDiv); 
+    System.out.println(Integer.toString(number1) + "+" + Integer.toString(number2) + "=" + Integer.toString (Add));
+    System.out.println(Integer.toString(number1) + "-" + Integer.toString(number2) + "=" + Integer.toString (Sub));
+    System.out.println(Integer.toString(number1) + "/" + Integer.toString(number2) + "=" + Integer.toString (Div));
+    System.out.println(Integer.toString(number1) + "*" + Integer.toString(number2) + "=" + Integer.toString (Mul));
+    System.out.println(Integer.toString(number1) + "%" + Integer.toString(number2) + "=" + Integer.toString (MDiv));
   } 
 }
