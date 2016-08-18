@@ -16,12 +16,12 @@ public class FundamentalsP2
         
          if( num1 > num2 )
         {
-            System.out.println( "The value of a is " + num1 + " and it is greater than to b whose value is " + num2);
+            System.out.println( "The value of a is " + num1 + " and it is greater than b whose value is " + num2);
         }// end if
         
          if( num1 < num2 )
         {
-            System.out.println( "The value of a is " + num1 + " and it is less than to b whose value is " + num2);
+            System.out.println( "The value of a is " + num1 + " and it is less than b whose value is " + num2);
         }// end if
     }// end method main
 }// end class
