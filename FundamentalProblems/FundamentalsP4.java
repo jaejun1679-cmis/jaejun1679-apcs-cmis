@@ -7,13 +7,12 @@ public class FundamentalsP4
      for(int value = 1; value <= 10; value++)
      {
          int squareofvalue = value * value;
-         int randomofvalue = Math.random( value, squareofvalue );
          
-         System.out.println( value );
-         System.out.println( "\t" + squareofvalue );        
+         Random randomofvalue = new Random();
+         int randomofvalueB = randomofvalue.nextInt( squareofvalue + value);
          
-         System.out.println( randomofvalue );
          
+         System.out.println( value + "\t" + squareofvalue + "\t" + randomofvalueB );
         }
     }
 }
