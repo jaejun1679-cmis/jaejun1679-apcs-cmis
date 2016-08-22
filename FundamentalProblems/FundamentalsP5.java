@@ -19,8 +19,7 @@ public class FundamentalsP5
        } // end for
        
        int count = 0;
-       
-       while ( count = 0); index2 < favoritesongs.length; index2++ )
+       while ( count < 0)
        {
         System.out.println ( favoritesongs[index] );
         }// end while
