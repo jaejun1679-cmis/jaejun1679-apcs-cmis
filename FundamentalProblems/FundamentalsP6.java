@@ -1,4 +1,3 @@
-
 public class FundamentalsP6
 {
     public static void main ( String [] args )
@@ -9,11 +8,7 @@ public class FundamentalsP6
         {
          double value = Math.random() * 100;
          numbertray[ index ] =  (int) value;
-        }// end for 
-        
-        for ( int index = 0; index < numbertray.length; index ++ ) 
-        {
          System.out.println( numbertray[ index ] ) ;
-        }
+        }// end for 
     }// end method main
 }// end class

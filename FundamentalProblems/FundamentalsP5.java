@@ -15,13 +15,14 @@ public class FundamentalsP5
       
        for ( int index = 0; index < favoritemovies.length; index++ )
        {
-         System.out.println ( favoritemovies[index] );        
+         System.out.println ( favoritemovies[index] + "\n" + "\n" );        
        } // end for
        
        int count = 0;
-       while ( count < 0)
+       while ( count < favoritesongs.length)
        {
-        System.out.println ( favoritesongs[index] );
+        System.out.println ( favoritesongs[count] + "\n" + "\n");
+        count ++;
         }// end while
     } // end method main     
 }// end class
