@@ -1,5 +1,8 @@
 public class Template {
     public static void main ( String args [] ) {
-     // put coding in here
+     for ( int i = 0; i <10; i++)
+     {  System.out.println(i);
+     }
+     System.out.println(i);
     }// end method main
 }// end class
