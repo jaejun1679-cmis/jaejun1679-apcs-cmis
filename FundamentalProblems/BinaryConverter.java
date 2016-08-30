@@ -1,23 +1,32 @@
+import javax.swing.JOptionPane;
+
 public class BinaryConverter
 {
     public static void main(String[] args){
+        String inputfromuser = JOptionPane.showInputDialog( "Please insert a number in binary: ");
         
-        //Testing bin2dec()
-        String bin1 = "101101";
-        int dec1 = bin2dec(bin1);
-        assert dec1 == 45;
+        int count = 0;
         
-        //Testing dec2bin();
-        int dec2 = 34243;
-        String bin2 = dec2bin(dec2);
-        assert bin2.equals("1000010110111010");
+        for(int index = 0; index < inputfromuser.length(); index++)
+        {
+            if( inputfromuser.charAt(index = 0) == 1 )
+            {
+                count++;
+                index++;
+            }
+        }
+
+        System.out.println(count);
+    }
+
+    
+    public static int bin2dec(String bin)
+    {
+        return 0;
     }
     
-    public static int bin2dec(String bin){
-        return 45;
-    }
-    
-    public static String dec2bin(int dec){
+
+        public static String dec2bin(int dec){
         return "";
     }// end method main
 }// end class
