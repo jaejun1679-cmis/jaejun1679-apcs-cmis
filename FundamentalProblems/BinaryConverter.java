@@ -4,7 +4,7 @@ public class BinaryConverter
 {
     public static void main(String[] args){
         //Testing bin2dec()
-        String bin1 = "101010";
+        String bin1 = "1000000";
         int dec1 = bin2dec(bin1);
         assert dec1 == 10;
 
@@ -32,10 +32,12 @@ public class BinaryConverter
         }
         System.out.println ( totaldecvalue );
         
-        return 10;        
+        return 10;
     }
 
     public static String dec2bin(int dec){
+        
+        
         return "";
     }// end method main
 }// end class
