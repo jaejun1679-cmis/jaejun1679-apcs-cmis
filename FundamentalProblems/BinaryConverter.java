@@ -2,9 +2,9 @@ public class BinaryConverter
 {
     public static void main(String[] args){
         //Testing bin2dec()
-        String bin1 = "110011001100";
+        /*String bin1 = "110011001100";
         int dec1 = bin2dec(bin1);
-        assert dec1 == 10;
+        assert dec1 == 10;*/
 
         //Testing dec2bin();
         int dec2 = 65;
@@ -28,13 +28,22 @@ public class BinaryConverter
     }
 
     public static String dec2bin(int dec2){
-        int howmanytwos = 0;
+        int timeslooped= 0;
+        int powervalue = 0;
+        int originaldec2 = dec2;
 
-        for(int index = 0; dec2 == 0 || dec2 == 1; index++)
+        while (dec2 > 0) 
         {
- 
-            howmanytwos += 1;           
+            dec2 = originaldec2 - (int)((Math.pow (2, powervalue)));
+            if (dec2 < 0) 
+            {
+                break;
+            }
+            powervalue++;
+            timeslooped++;
         }
+      
+        
         return "";
     }// end method main
 }// end class
