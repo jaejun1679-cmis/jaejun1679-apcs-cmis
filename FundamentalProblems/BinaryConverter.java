@@ -23,27 +23,43 @@ public class BinaryConverter
                 totaldecvalue += Math.pow (2, expooftwo);
             }
         }
-        System.out.println ( totaldecvalue );        
+        System.out.println ( totaldecvalue );
         return 10;
     }
 
     public static String dec2bin(int dec2){
-        int timeslooped= 0;
         int powervalue = 0;
         int originaldec2 = dec2;
 
         while (dec2 > 0) 
         {
-            dec2 = originaldec2 - (int)((Math.pow (2, powervalue)));
-            if (dec2 < 0) 
+            dec2 = originaldec2 - (int)((Math.pow (2, powervalue)));            
+            if (dec2 < 0)
             {
                 break;
-            }
+            }            
             powervalue++;
-            timeslooped++;
         }
-      
         
+        String [] digits = new String [powervalue - 1];
+        digits [0] = "1";
+        
+        for (int index = 1; index == powervalue; index++)
+        {
+            if((int)dec2 % 2 == 0)
+            {
+                digits [index] = "0";
+            }
+            else 
+            {
+                digits [index] = "1";
+            }
+        }
+        
+        for (int index = 0; index <= powervalue; index++)
+        {
+            System.out.println (digits [index]);
+        }
         return "";
-    }// end method main
-}// end class
+    }
+}
