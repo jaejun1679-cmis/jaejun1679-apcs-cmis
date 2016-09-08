@@ -33,11 +33,7 @@ public class BinaryConverter
 
         while (dec2 > 0) 
         {
-            dec2 = originaldec2 - (int)((Math.pow (2, powervalue)));            
-            if (dec2 < 0)
-            {
-                break;
-            }            
+            dec2 = originaldec2 - (int)((Math.pow (2, powervalue)));
             powervalue++;
         }
         
@@ -56,7 +52,7 @@ public class BinaryConverter
             }
         }
         
-        for (int index = 0; index <= powervalue; index++)
+        for (int index = 0; index < powervalue; index++)
         {
             System.out.println (digits [index]);
         }
