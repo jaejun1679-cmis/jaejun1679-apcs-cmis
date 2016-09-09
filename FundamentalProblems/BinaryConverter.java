@@ -29,32 +29,40 @@ public class BinaryConverter
 
     public static String dec2bin(int dec2){
         int powervalue = 0;
-        int originaldec2 = dec2;
-
         while (dec2 > 0) 
         {
+            int originaldec2 = dec2;
             dec2 = originaldec2 - (int)((Math.pow (2, powervalue)));
-            powervalue++;
+            if (dec2 > 0) 
+            {
+                powervalue++;
+            }
+
         }
-        
+        System.out.print( powervalue);
+
         String [] digits = new String [powervalue - 1];
-        digits [0] = "1";
-        
-        for (int index = 1; index == powervalue; index++)
+
+        for (int index = 0; index < dec2; index++)
         {
-            if((int)dec2 % 2 == 0)
+            if( dec2 > 0)
             {
-                digits [index] = "0";
-            }
-            else 
-            {
-                digits [index] = "1";
+                int remainder = dec2%2;
+                if (remainder == 1) 
+                {
+                    digits [index] = Integer.toString( remainder );
+                }
+                else 
+                {
+                    digits [index] = Integer.toString( remainder );
+                }
             }
         }
-        
-        for (int index = 0; index < powervalue; index++)
+        System.out.print (dec2);
+
+        for (int index = digits.length - 1; index > 0; index--) 
         {
-            System.out.println (digits [index]);
+            System.out.print(digits[index]);
         }
         return "";
     }
