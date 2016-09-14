@@ -10,16 +10,23 @@ public class Histogram {
 
         for (int index = 0; index <= intuserinput; index++) //Generate numbers and put in array
         {
-            int numbergenerated =  (int) Math.random() * 99;            
-            if ( numberrange [numbergenerated] == numbergenerated ) 
-            {
-                stackedtimes[index] += 1;
-            }
+            int numbergenerated =  (int) Math.random() * 99;
+            numberrange [numbergenerated] += 1;
         }//end first for loop
 
-        for (int index = 0; index == 99 ; index++) //Print array with correct #'#'
+        for (int index = 0; index < 100; index++) //Print array with correct #'#'
         {
-            System.out.println( index + ":" + ( "#" * stackedtimes[index] ));
+            String hasnumbers = "";
+            for (int index2 = 0; index2 < 99; index++)
+            {
+                if () 
+                {
+                    
+                }
+                
+                hasnumbers += "#";
+            }    
+            System.out.println( index + ":" + hasnumbers);
         }//end second for loop
     }//end method main
 }//end class
