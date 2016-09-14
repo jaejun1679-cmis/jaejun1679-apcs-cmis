@@ -6,27 +6,28 @@ public class Histogram {
         int intuserinput = Integer.parseInt( userinput ); //convert userinput to int
 
         int [] numberrange = new int [99]; //defined first array
-        int [] stackedtimes = new int [99]; //defined second array
+        int max = 0, min = 0, mode = 0, avg = 0, sum = 0;
 
-        for (int index = 0; index <= intuserinput; index++) //Generate numbers and put in array
+        for (int index = 0; index <= intuserinput; index++) 
+        //Generate numbers and put in array
         {
-            int numbergenerated =  (int) Math.random() * 99;
+            int numbergenerated = (int) (Math.random() * 100);
             numberrange [numbergenerated] += 1;
         }//end first for loop
 
+        
         for (int index = 0; index < 100; index++) //Print array with correct #'#'
         {
             String hasnumbers = "";
-            for (int index2 = 0; index2 < 99; index++)
+            
+            /*
+            for (int index2 = 0; index2 < numberrange.length; index++)
             {
-                if () 
-                {
-                    
-                }
                 
-                hasnumbers += "#";
-            }    
-            System.out.println( index + ":" + hasnumbers);
+            }
+            */
+            System.out.println( index + ": " + hasnumbers);
+                        
         }//end second for loop
     }//end method main
 }//end class
