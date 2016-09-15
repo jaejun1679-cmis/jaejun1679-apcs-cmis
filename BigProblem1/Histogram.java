@@ -14,7 +14,8 @@ public class Histogram {
             numberrange [numbergenerated] += 1;
         }//end first for loop
 
-        for (int index = 0; index < 100; index++) //Print array with correct #'#'
+        for (int index = 0; index < 100; index++) 
+        //Print array with correct #'#'
         {
             String hasnumbers = "";
             while(numberrange[index] > 0)
@@ -30,13 +31,13 @@ public class Histogram {
         for (int index = 0; index < numberrange.length; index++)
         //finding the max and the min
         {
-            if ( numberrange[ index ] >= max )
+            if ( numberrange[ index ] > 0 )
             {
-                max = numberrange[index];
+                max = index;
             }
-            if ( numberrange[ index ] <= min )
+            if ( numberrange[ index ] < 0 )
             {
-                min = numberrange[index];
+                min = index;
             }
         }
         System.out.println( "Maximum: " + max);
@@ -49,5 +50,6 @@ public class Histogram {
         }
         avg = sum / (intuserinput);
         System.out.println( "Sum: " + sum);
+        System.out.println( "Avg: " + avg);
     }
 }//end method main
