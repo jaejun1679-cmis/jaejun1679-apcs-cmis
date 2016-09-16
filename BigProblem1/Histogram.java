@@ -7,13 +7,14 @@ public class Histogram {
 
         int [] numberrange = new int [intuserinput]; //defined first array
         int [] numbercount = new int [100];//defined second array
-        
+
         int sum = 0;
         double avg = 0.0;
 
         for (int index = 0; index < intuserinput; index++) 
         //Generate numbers and put in array
         {
+            
             numberrange[index] = (int)(Math.random() * 100);
             numbercount [numberrange [ index ]] += 1;
             sum += numberrange[index];
@@ -30,7 +31,7 @@ public class Histogram {
             }
             System.out.println( index + ": " + hasnumbers);
         }//end second for loop
-        
+
         int max = 0, min = 99;
         for (int index = 0; index < numberrange.length; index++)
         //finding the max and the min
@@ -54,7 +55,7 @@ public class Histogram {
         System.out.println( "Sum: " + sum);
         System.out.println( "Average: " + avg);
         System.out.println( "Mode(s): ");
-        
+
         int mode = 0;
         for (int index = 0; index < numbercount.length; index++)
         {
