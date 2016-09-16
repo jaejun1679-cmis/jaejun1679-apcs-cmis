@@ -10,12 +10,13 @@ public class Test1 {
         if (intuserinput > 50 || intuserinput < 1)
         {
             System.out.print("That ain't right.");
+            System.exit(0);
         }
         
         for (int index = 0; index < numbers.length; index++) 
         //Generate numbers and put in array
         {
-            numbers[index] = (Math.random() * (50.0) + 1));            
+            numbers[index] = (int)(Math.random() * 50) + 1;
             System.out.println(index +": "+ numbers[index]);
         }//end first for loop
         
