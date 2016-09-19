@@ -5,7 +5,7 @@ public class Test1 {
         String userinput = JOptionPane.showInputDialog( "Type any number between 1 ~ 50: "); //userinput number
         int intuserinput = Integer.parseInt( userinput ); //convert userinput to int
 
-        int [] numbers = new int [intuserinput]; //defined array
+        double [] numbers = new double [intuserinput]; //defined array
 
         if (intuserinput > 50 || intuserinput < 1)
         {
@@ -16,7 +16,7 @@ public class Test1 {
         for (int index = 0; index < numbers.length; index++) 
         //Generate numbers and put in array
         {
-            numbers[index] = (int)(Math.random() * 50) + 1;
+            numbers[index] = (Math.random() * 50) + 1;
             System.out.println(index +": "+ numbers[index]);
         }//end first for loop
         
