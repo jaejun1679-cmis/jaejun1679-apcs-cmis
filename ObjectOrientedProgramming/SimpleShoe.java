@@ -2,14 +2,16 @@
 public class SimpleShoe
 {
     // instance variables
-    private String brandname = "New Balance";
-    private String color = "Black";
+    private String brandname = "Vans";
     private boolean laces = false;
     private int size = 11;
-
+    
+    //constant variables
+    public static final String color = "White";
+    
+    
     public SimpleShoe(String color, String brandname, boolean laces, int size)
     {
-        this.color = color;
         this.brandname = brandname;
         this.laces = laces;
         this.size = size;
@@ -22,7 +24,6 @@ public class SimpleShoe
         while (nLetters > 0)
         {
             this.brandname += Character.toString((char)( 'a' + (char)(Math.random())));
-            this.color += Character.toString((char)('a' + (char)(Math.random())));
             nLetters++;
         }        
     }
@@ -50,12 +51,7 @@ public class SimpleShoe
     {
         return color;
     }
-
-    public void setColor(String newColor)
-    {
-        color = newColor;
-    }
-
+    
     public boolean getLaces()
     {
         return laces;
@@ -108,5 +104,14 @@ public class SimpleShoe
             lacesyesorno = "Shoe without laces.";
         }
         return lacesyesorno;
+    }
+    
+    public String RepaintShoes(String color)
+    {
+        String newcolor = "";
+        if (brandname  == value)
+        {}
+        
+        return newcolor;
     }
 }

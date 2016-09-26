@@ -6,23 +6,22 @@ public class Person
     private boolean gender = true;
     //male -> fase...female -> true
 
-
     public Person()
     {
-        
+        this.age = (int) Math.random() * 99 + 1;         
     }
 
    
     public double getYearsLeft()
     {
-        int yearsLeft;
+        double yearsLeft;
         if (gender == true)
         {
-            yearsLeft = 86.8 - age;
+            yearsLeft = 86.8 - (double)age;
         }
         else
         {
-            yearsLeft = 80.5 - age;
+            yearsLeft = 80.5 - (double) age;
         }
         return yearsLeft;
     }
