@@ -1,40 +1,34 @@
-
 public class SimpleShoe
 {
     // instance variables
     private String brandname = "Vans";
     private boolean laces = false;
     private int size = 11;
+    private String color = "White";
     
     //constant variables
-    public static final String color = "White";
+    public static String[] brandNames = new String[]{"Nike", "Converse", "Vans", "Puma", "Adidas", "Cros", "Chanel", "Keds", "K-Swiss", "New Balance"};
+    public static String[] shoeColors = new String[]{"Red", "Pink", "Orange", "Yellow", "Green", "Blue", "Purple", "Brown", "Black", "White"};
     
-    
-    public SimpleShoe(String color, String brandname, boolean laces, int size)
+    public SimpleShoe(String brandname, boolean laces, int size, String color)
     {
         this.brandname = brandname;
         this.laces = laces;
         this.size = size;
     }
 
-    public SimpleShoe(int nLetters)
+    public String toString()
     {
-        this.size = (int) Math.random() * 12;
-        this.laces = Math.random() < 0.5;
-        while (nLetters > 0)
-        {
-            this.brandname += Character.toString((char)( 'a' + (char)(Math.random())));
-            nLetters++;
-        }        
+        String output = "Brandame: " + brandname + "\nColor: " + color + " \nLaces: " + laces + "\nShoe size: " + size; 
+        return output;
     }
-
-    public static void main(String[] args)
+    
+    public SimpleShoe()
     {
-        SimpleShoe shoe1 = new SimpleShoe("Nike", "Blue", false, 11);
-        System.out.println(shoe1.brandname);
-        System.out.println(shoe1.color);
-        System.out.println(shoe1.laces);
-        System.out.println(shoe1.size);
+        this.brandname = brandNames[(int) (Math.random() * 9)];
+        this.size = (int) (Math.random() * 12);
+        this.laces = Math.random() < 0.5;
+        this.color = shoeColors[(int) (Math.random() * 9)];
     }
 
     public String getBrandName()
@@ -72,12 +66,6 @@ public class SimpleShoe
         size = newSize;
     }
 
-    public String toString()
-    {
-        String output = "Brandame: " + brandname + "/nColor:" + color + " /nLaces (yes or no): " + laces + "/nShoe size" + size; 
-        return output;
-    }
-
     public String getTruncName(int limit)
     {
         String truncName;
@@ -109,9 +97,8 @@ public class SimpleShoe
     public String RepaintShoes(String color)
     {
         String newcolor = "";
-        if (brandname  == value)
-        {}
-        
+               
         return newcolor;
     }
+    
 }
