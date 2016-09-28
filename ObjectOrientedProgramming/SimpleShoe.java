@@ -94,11 +94,11 @@ public class SimpleShoe
         return lacesyesorno;
     }
     
-    public String RepaintShoes(String color)
+    public void setRepaintShoes(String shoeColor[])
     {
         String newcolor = "";
-               
-        return newcolor;
+        newcolor = shoeColor[(int) (Math.random() * 9)];
+        this.color = newcolor;
     }
     
 }
