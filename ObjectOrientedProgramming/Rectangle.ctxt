@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Rectangle()
+comment1.params=p
+comment1.target=Rectangle(Point)
+comment2.params=w\ h
+comment2.target=Rectangle(int,\ int)
+comment3.params=p\ w\ h
+comment3.target=Rectangle(Point,\ int,\ int)
+comment4.params=x\ y
+comment4.target=void\ move(int,\ int)
+comment5.params=
+comment5.target=int\ getArea()
+numComments=6
