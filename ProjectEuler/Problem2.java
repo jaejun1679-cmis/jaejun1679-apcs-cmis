@@ -1,33 +1,20 @@
-
-/**
- * Write a description of class Problem2 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Problem2
+public class Problem2 
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Problem2
-     */
-    public Problem2()
+    public static void main ( String args [] ) 
     {
-        // initialise instance variables
-        x = 0;
-    }
+        int [] numbers = new int [40000000];
+        numbers[0] = 1;
+        numbers[1] = 2;
+        int sum = 0;
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        for (int index = 0; index < 4000000; index++)
+        {
+            numbers[index + 2] = numbers[index] + numbers[index + 1];
+            if (numbers[index + 2] == )//fix this part
+            {
+                sum =+ numbers [index + 2]; 
+            }
+        }
+        System.out.println(sum);
     }
-}
+}//end class
