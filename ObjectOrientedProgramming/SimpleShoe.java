@@ -118,5 +118,4 @@ public class SimpleShoe
         newcolor = shoeColor[(int) (Math.random() * 9)];
         this.color = newcolor;
     }
-
 }
