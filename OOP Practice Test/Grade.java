@@ -1,20 +1,18 @@
 public class Grade
 {
     private Course course;
-    private double grade; 
-    
-    public Course getCourse()
-    {
+    private double grade;
+    public Grade(Course course, double grade){
+        this.course = course;
+        this.grade = grade;
+    }
+    public Course getCourse(){
         return course;
     }
-    
-    public double getGrade()
-    {
+    public double getGrade(){
         return grade;
     }
-    
-    public void setGrade(double newGrade)
-    {
+    public void setGrade(double newGrade){
         grade = newGrade;
     }
 }

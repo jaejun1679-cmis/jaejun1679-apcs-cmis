@@ -1,20 +1,17 @@
-public class Course
+ public class Course
 {
     private String name;
-    private String teacher; 
-
-    public Course(String name, String teacher)
-    {
-        this.name = "Bob";
-        this.teacher = "Steve";
+    private String teacher;
+    
+    public Course(String name, String teacher){
+        this.name = name;
+        this.teacher = teacher;
     }
 
-    public String getName()
-    {
+    public String getName(){
         return name;
     }
-    public String getTeacher()
-    {
+    public String getTeacher(){
         return teacher;
-    }    
+    }
 }
