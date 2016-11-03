@@ -32,8 +32,7 @@ public class Student
         int index = 0;
         double min = 4.0;
         double max = 0;
-        
-        
+               
         
         for(int index2 = 0; index2 < grades.length; index2++)
         {
@@ -41,6 +40,21 @@ public class Student
             {
                 grades[index].getScore() = min;
             }
+            if(grade[index].getScore() > max)
+            {
+                grades[index].getScore() = max;
+            }
+            
+            if (min == max)
+            {
+                result[0] = min;
+                return min;
+            }
+            
+            return null;
         }
+        
+        
+        
     }
 }

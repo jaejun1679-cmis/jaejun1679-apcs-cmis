@@ -21,6 +21,10 @@ public class School
 
     public double gpaForCourse(Course course)
     {
-        return 1;
+        int sum  = 0;
+        for(int index = 0; index < Grades[].length;index++)
+        {
+            sum += grades[index].getGrade().getScore();
+        }
     }
 }
