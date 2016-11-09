@@ -8,6 +8,7 @@ public class Basic {
             }             
         }
         System.out.println();
+        
         for (int y = 0; y < grid[0].length; y++){
             System.out.println();
             for(int x = 0; x < grid.length; x++){
