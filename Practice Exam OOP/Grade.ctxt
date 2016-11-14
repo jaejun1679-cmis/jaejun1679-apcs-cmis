@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=course\ grade
+comment0.target=Grade(Course,\ double)
+comment1.params=
+comment1.target=Course\ getCourse()
+comment2.params=
+comment2.target=double\ getGrade()
+comment3.params=newGrade
+comment3.target=void\ setGrade(double)
+numComments=4

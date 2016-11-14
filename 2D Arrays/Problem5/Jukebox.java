@@ -20,6 +20,37 @@ public class Jukebox
         songList[2][1] = new MySong( "Right as Rain", 4 );
         songList[2][2] = new MySong( "Beat It", 5 );
         songList[2][3] = new MySong( "Bust a Move", 4 );
-
+    }
+    
+    public String toString() {
+        for( MySong[] row : songList){
+            for (MySong song : row){
+                System.out.println(song.getName());
+            }
+        }
+        return "";
+    }
+    
+    public String choseSong(){
+        int randomRow = (int)((Math.random()) * 4);
+        int randomCol = (int)((Math.random()) * 3);
+        
+        if( songList[randomRow][randomCol] != null){
+            System.out.println(songList[randomRow][randomCol].getName());
+        }
+        
+        return "";
+    }
+    
+    public int playSongOfRating(int rating){
+        for(int row = 0; row < songList.length; row++){
+            for(int col = 0; col < songList[0].length; col++){
+                if ( songList[row][col].getRating() == rating){
+                    System.out.println(songList[row][col]);
+                }
+            }            
+        }
+        
+        return 0;
     }
 }
