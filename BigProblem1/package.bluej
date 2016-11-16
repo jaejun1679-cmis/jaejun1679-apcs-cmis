@@ -2,9 +2,9 @@
 objectbench.height=76
 objectbench.width=742
 package.editor.height=420
-package.editor.width=616
-package.editor.x=20
-package.editor.y=58
+package.editor.width=644
+package.editor.x=526
+package.editor.y=117
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
