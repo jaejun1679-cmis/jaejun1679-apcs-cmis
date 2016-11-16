@@ -2,23 +2,35 @@ import javax.swing.JOptionPane;
 public class PasswordProtector{
     public static void main ( String args [] ) {
         String lastName = JOptionPane.showInputDialog("What is thy nameth? ");
-        String lastNameLowerCase = lastName.toLowerCase();
-        char[] lastNameLowerCaseArray = lastNameLowerCase.toCharArray();
-        
-        char firstLetter = lastNameLowerCaseArray[0];
-        char secondLetter = lastNameLowerCaseArray[1];
-        
-        boolean start = true; 
-        boolean stop = true;
-        
+        String lastNameLC = lastName.toLowerCase();
+        char[] nameLCArray = lastNameLC.toCharArray();
+
+        boolean start = true;
+        boolean end = false;
+        boolean pass = false;
+
         while (start){
             String userPassword = JOptionPane.showInputDialog("How about thy password'th thy shalt use? ");
-            String userPasswordLowerCase = userPassword.toLowerCase();
+            String userPasswordLC = userPassword.toLowerCase();
+            char [] passwordLCArray = userPasswordLC.toCharArray();
+
+            for (int index = 0; index < passwordLCArray.length; index ++ ){
+                if (nameLCArray[index] == passwordLCArray[index] && nameLCArray[index + 1] == passwordLCArray[index + 1]) {
+                    if (userPasswordLC.substring(index, index + lastNameLC.length()).equals(lastNameLC)){
+                        System.out.println("Password defies all regulations. Please tryeth again.");
+                    }
+                    else{
+                        pass = true;
+                        index++;
+                    }
+                }
+            }
             
-        }
-        
-        
-        
+            if (pass = true){
+                System.out.println("Thou has't madeth a password without using thy name! ");
+                start = end;
+            }
+        }        
     }
 }
 

@@ -43,13 +43,27 @@ public class PraticeTest {
 
         //all column major things here
         System.out.println("Column Major:");
-        for (int y = 0; y < grid.length; y++){
-
-            for(int x = 0; x < grid[0].length; x++){
-                sum += grid[y][x];
+        for (int x = 0; x < grid.length; x++){
+            for(int y = 0; y < grid.length; y++){
+                sum += grid[x][y];
                 System.out.print(grid[x][y] + " ");
-            } 
+            }
+            if( max < sum ){
+                max = sum;
+                result[0] = sum;
+                result[1] = x;
+                sum = 0;
+            }
             System.out.println();
+        }
+        System.out.println();
+        for (int index = 0; index < result.length; index++){
+            if ( index == 0 ){
+                System.out.println("Sum: " + result[index]);
+            }
+            else{
+                System.out.println("Index: " + result[index]);
+            }
         }
     }
 }

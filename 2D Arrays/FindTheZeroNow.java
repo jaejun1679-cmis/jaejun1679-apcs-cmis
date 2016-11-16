@@ -45,7 +45,7 @@ public class FindTheZeroNow{
             while ( test ){
                 if ( userguess == 0){
                     System.out.println("Bring this man a cookie! You have found the zero!");
-                    System.exit(0);
+                    test = false;
                 }
                 userguess = gameBoard[guessRow][guessCol];
                 System.out.println("Nope. Guess again!");
@@ -53,7 +53,7 @@ public class FindTheZeroNow{
 
                 for (int y = 0; y < gameBoard[0].length; y++){
                     for(int x = 0; x < gameBoard.length; x++){
-                        if ( gameBoard[y][x] == 1000){
+                        if ( gameBoard[y][x] == 101){
                             System.out.print("N ");
                         }
                         else{
