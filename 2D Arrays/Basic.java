@@ -5,10 +5,10 @@ public class Basic {
         for (int y = 0; y < grid.length; y++){
             for(int x = 0; x < grid.length; x++){
                 System.out.print(grid[y][x]);
-            }             
+            }   
+            System.out.println();
         }
-        System.out.println();
-        
+
         for (int y = 0; y < grid[0].length; y++){
             for(int x = 0; x < grid.length; x++){
                 System.out.println(grid[x][y]);
