@@ -35,11 +35,14 @@ public class FindTheZeroNow{
         int guessRow = Integer.parseInt(JOptionPane.showInputDialog("Guess the row number: "));
         int guessCol = Integer.parseInt(JOptionPane.showInputDialog("Now guess the column number: "));
         boolean test = true;
+
+        int rowOffBy = 0;
+        int colOffBy = 0;
         int userguess = gameBoard[guessRow][guessCol];
 
         if ( userguess == 0){
             System.out.println("Bring this man a cookie! You have found the zero!");
-            System.exit(0);
+            test = false;
         }
         else {
             while ( test ){
@@ -48,9 +51,11 @@ public class FindTheZeroNow{
                     test = false;
                 }
                 userguess = gameBoard[guessRow][guessCol];
-                System.out.println("Nope. Guess again!");
+                rowOffBy = goalRow - guessRow;
+                colOffBy = goalCol - guessCol;
+                
+                System.out.println("Nope. Guess again! \nHint: The zero is off by " + rowOffBy + " rows and " +  colOffBy + " columns.");
                 gameBoard[guessRow][guessCol] = 101;
-
                 for (int y = 0; y < gameBoard[0].length; y++){
                     for(int x = 0; x < gameBoard.length; x++){
                         if ( gameBoard[y][x] == 101){
