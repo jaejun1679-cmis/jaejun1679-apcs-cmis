@@ -40,7 +40,8 @@ public class Test
                     y++;
                 }
             }  
-        }//determines where the 9 is (+1 pt)
+        }//determines where the 9 is (+1 pt)6+
+        
         if (indexRow == 0 || indexCol == 0){
             result[0][0] = nums[indexRow][indexCol];
             result[0][1] = nums[indexRow + 1][indexCol];
