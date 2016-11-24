@@ -1,7 +1,7 @@
 public class Furniture
 {
     private String type;
-    private String wood;    
+    private String wood;
     
     public Furniture(String type, String wood){
         this.type = type;
@@ -25,7 +25,6 @@ public class Furniture
     }
     
     public String toString(){
-        return String.format("Hi! I am a %s and I am made from %s trees.",type,wood);
+        return String.format("Hi! I am a %s and I am made from %s trees." + "%n",type,wood);
     }
-    
 }

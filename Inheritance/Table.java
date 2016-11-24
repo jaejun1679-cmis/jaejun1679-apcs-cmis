@@ -11,10 +11,13 @@ public class Table extends Furniture
         return legs;
     }
     
-    public void setLets(){
+    public void setLegs(String newLegs){
         int a = 0;
-        a = (int)(Math.random() * 7 + 1);
-        legs = a;
-    }   
+        a = (int)((Math.random() * 7) + 1);
+        newLegs = Integer.toString(a);
+    }
     
+    public String toString(){
+        return "";
+    }
 }
