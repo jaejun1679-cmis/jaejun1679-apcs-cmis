@@ -1,11 +1,11 @@
 public class Furniture
 {
     private String type;
-    private String wood;
+    private String material;
     
-    public Furniture(String type, String wood){
+    public Furniture(String type, String material){
         this.type = type;
-        this.wood = wood;
+        this.material = material;
     }
     
     public String getType(){
@@ -16,15 +16,15 @@ public class Furniture
         type = newType;
     }
    
-    public String getWood(){
-        return wood;
+    public String getMaterial(){
+        return material;
     }
     
-    public void setWood(String newWood){
-        wood = newWood;
+    public void setmaterial(String newMaterial){
+        material = newMaterial;
     }
     
     public String toString(){
-        return String.format("Hi! I am a %s and I am made from %s trees." + "%n",type,wood);
+        return String.format("Hi! I am a %s and I am made from %s." + "%n",type,material);
     }
 }

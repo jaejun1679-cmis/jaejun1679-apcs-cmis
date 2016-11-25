@@ -2,8 +2,8 @@ public class Counter extends Furniture
 {
     String shade; 
     
-    public Counter(String type, String wood, String shade){
-        super(type, wood);
+    public Counter(String type, String material, String shade){
+        super(type, material);
         this.shade = shade;
     }
     

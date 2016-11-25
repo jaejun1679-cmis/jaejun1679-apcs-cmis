@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=type\ wood\ shade
+comment0.params=type\ material\ shade
 comment0.target=Counter(java.lang.String,\ java.lang.String,\ java.lang.String)
 comment1.params=
 comment1.target=java.lang.String\ getShade()

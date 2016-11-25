@@ -2,8 +2,8 @@ public class Table extends Furniture
 {
     private int legs;
     
-    public Table(String type, String wood, int legs){
-        super(type, wood);
+    public Table(String type, String material, int legs){
+        super(type, material);
         this.legs = legs;
     }
     

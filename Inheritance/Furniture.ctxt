@@ -1,14 +1,14 @@
 #BlueJ class context
-comment0.params=type\ wood
+comment0.params=type\ material
 comment0.target=Furniture(java.lang.String,\ java.lang.String)
 comment1.params=
 comment1.target=java.lang.String\ getType()
 comment2.params=newType
 comment2.target=void\ setType(java.lang.String)
 comment3.params=
-comment3.target=java.lang.String\ getWood()
-comment4.params=newWood
-comment4.target=void\ setWood(java.lang.String)
+comment3.target=java.lang.String\ getMaterial()
+comment4.params=newMaterial
+comment4.target=void\ setmaterial(java.lang.String)
 comment5.params=
 comment5.target=java.lang.String\ toString()
 numComments=6
