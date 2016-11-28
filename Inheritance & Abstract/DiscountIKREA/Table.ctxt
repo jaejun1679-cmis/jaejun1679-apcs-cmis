@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=type\ material\ legs
+comment0.target=Table(java.lang.String,\ java.lang.String,\ int)
+comment1.params=
+comment1.target=int\ getLegs()
+comment2.params=newLegs
+comment2.target=void\ setLegs(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

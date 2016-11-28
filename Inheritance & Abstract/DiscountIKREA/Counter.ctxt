@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=type\ material\ shade
+comment0.target=Counter(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ getShade()
+comment2.params=newShade
+comment2.target=void\ setShades(java.lang.String)
+numComments=3
