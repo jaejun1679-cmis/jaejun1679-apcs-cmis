@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=type\ material\ color\ bed
-comment0.target=SofaBed(java.lang.String,\ java.lang.String,\ java.lang.String,\ boolean)
-comment1.params=
-comment1.target=boolean\ getBed()
-comment2.params=newBed
-comment2.target=void\ setBed(boolean)
-numComments=3
