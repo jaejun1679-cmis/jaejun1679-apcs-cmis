@@ -3,22 +3,13 @@ package InheritanceProblems.Problem1;
 public class MyPhone extends MyDevice
 {
     // instance variables    
-    
     private String model;
     private String color;
     private boolean earbuds = true;
 
-    public MyPhone()
+    public MyPhone(String brand, int battery, String model, String color)
     {
-        super();
-        this.model = "Note 7";
-        this.color = "Gold";
-        this.earbuds = earbuds;
-    }
-
-    public MyPhone(String brand, String model, String color)
-    {
-        super();
+        super(brand, battery);
         this.model = model;
         this.color = color;
         if(model == "Iphone7" || model == "Iphone 7"){

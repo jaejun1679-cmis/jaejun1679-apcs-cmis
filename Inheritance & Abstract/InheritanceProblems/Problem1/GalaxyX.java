@@ -1,3 +1,4 @@
+/*
 package InheritanceProblems.Problem1;
 
 public class GalaxyX extends MyPhone
@@ -6,4 +7,9 @@ public class GalaxyX extends MyPhone
     
     
     
+    
+    
 }
+*
+*not sure if I'll be needing this class
+*/
