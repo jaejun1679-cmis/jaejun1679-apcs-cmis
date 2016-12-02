@@ -5,8 +5,8 @@ public class MyPhone extends MyDevice
     // instance variables    
     private String model;
     private String color;
-    private boolean headphoneJack = true;
-
+    private boolean headphoneJack = true;    
+    
     public MyPhone(String brand, boolean power, int RAM, String model, String color)
     {
         super(brand, power, RAM);
@@ -22,9 +22,9 @@ public class MyPhone extends MyDevice
     }
 
     public void setModel(String newModel){
-        model = newModel; 
+        model = newModel;
     }
-
+    
     public String getColor(){
         return color;
     }

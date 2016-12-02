@@ -43,7 +43,7 @@ public class MyDevice
     public String toString(){
         if(power == true){
             return String.format("Device's brand: %s.%n" + 
-                "Power: On." + 
+                "Power: On.%n" + 
                 "RAM: %s",brand, RAM);
         }
         else{

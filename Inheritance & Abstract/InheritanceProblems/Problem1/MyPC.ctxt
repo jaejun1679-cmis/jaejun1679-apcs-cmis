@@ -10,5 +10,5 @@ comment3.target=java.lang.String\ getGPU()
 comment4.params=newGPU
 comment4.target=void\ setGPU(java.lang.String)
 comment5.params=
-comment5.target=java.lang.String\ toSting()
+comment5.target=java.lang.String\ toString()
 numComments=6

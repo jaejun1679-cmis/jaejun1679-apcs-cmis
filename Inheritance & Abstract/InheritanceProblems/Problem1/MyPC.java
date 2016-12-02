@@ -27,13 +27,13 @@ public class MyPC extends MyDevice
     public void setGPU(String newGPU){
         GPU = newGPU;
     }
-
-    public String toSting(){
+    
+    public String toString(){
         if(super.getPower() == true){
-            return String.format("I AM FROM THE PC MASTER RACE." + 
-                "AS % MY MAIN BUILD, " +
-                "I AM BUILT WITH A %s AS MY CPU AND A %s AS MY GPU " +
-                "WHILST RUNNING THINGS WITH %s GBs WORTH OF RAM. FEAR. ME.",super.getBrand(), CPU, GPU, super.getRAM()); 
+            return String.format("Hello. I am from the PC master race. " + 
+                "I am primarily built with %s, " +
+                "and I built with a %s as my CPU and a %s as my GPU " +
+                "I also have things under control with %s GBs worth of RAM. FEAR. ME.",super.getBrand(), CPU, GPU, super.getRAM()); 
         }
         else{
             return "Power is off. Please charge and try again later.";
