@@ -1,0 +1,16 @@
+package InheritanceProblems.Problem2;
+public class DLP extends Television
+{
+    private double dlp = 0.0;
+    public DLP()
+    {
+        
+        super.setPrice(dlp) = 5.0;        
+    }
+
+    public int sampleMethod(int y)
+    {
+        // put your code here
+        return x + y;
+    }
+}
