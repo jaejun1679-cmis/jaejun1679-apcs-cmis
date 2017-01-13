@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=brand\ power\ RAM\ model\ color
+comment0.target=MyPhone(java.lang.String,\ boolean,\ int,\ java.lang.String,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ getModel()
+comment2.params=newModel
+comment2.target=void\ setModel(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getColor()
+comment4.params=newColor
+comment4.target=void\ setColor(java.lang.String)
+comment5.params=
+comment5.target=boolean\ getHeadphoneJack()
+comment6.params=newHeadphoneJack
+comment6.target=void\ setModel(boolean)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8
