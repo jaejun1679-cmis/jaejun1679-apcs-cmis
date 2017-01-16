@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=boolean\ getTvOn()
+comment1.params=newTvON
+comment1.target=void\ setTvON(boolean)
+comment2.params=
+comment2.target=java.lang.String\ tvType()
+numComments=3
