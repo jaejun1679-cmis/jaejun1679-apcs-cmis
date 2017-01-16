@@ -1,6 +1,6 @@
 package Problems.P8A;
 
-public abstract class MyPhone extends MyDevice implements Connectable
+public class MyPhone extends MyDevice implements Connectable
 {
     // instance variables    
     private String model;

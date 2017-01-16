@@ -1,6 +1,6 @@
 package Problems.P8A;
 
-public abstract class MyPC extends MyDevice implements Connectable
+public class MyPC extends MyDevice implements Connectable
 {
     // instance variables 
     private String CPU;

@@ -1,8 +1,20 @@
 #BlueJ class context
-comment0.params=
-comment0.target=MyCar()
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ MyCar\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
-numComments=2
+comment0.params=traveled\ passengers\ color
+comment0.target=MyCar(int,\ int,\ java.lang.String)
+comment1.params=
+comment1.target=int\ getTraveled()
+comment2.params=newTraveled
+comment2.target=void\ setTraveled(int)
+comment3.params=
+comment3.target=int\ getPassengers()
+comment4.params=newPassengers
+comment4.target=void\ setPassengers(int)
+comment5.params=
+comment5.target=java.lang.String\ getColor()
+comment6.params=newColor
+comment6.target=void\ setColor(java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment8.params=
+comment8.target=java.lang.String\ connectToBluetooth()
+numComments=9
