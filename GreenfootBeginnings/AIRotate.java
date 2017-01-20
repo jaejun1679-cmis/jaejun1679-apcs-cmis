@@ -14,6 +14,9 @@ public class AIRotate extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        move(2);
+        if (Greenfoot.getRandomNumber(100) < 8){
+            turn(Greenfoot.getRandomNumber(90) - 45);
+        }
     }    
 }

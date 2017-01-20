@@ -14,6 +14,19 @@ public class AILinear extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        if (Greenfoot.getRandomNumber(100) < 40){
+            if (Greenfoot.getRandomNumber(100) < 25){
+                setLocation(getX(), getY() - 3);
+            }    
+            if (Greenfoot.getRandomNumber(100) > 25 &&  Greenfoot.getRandomNumber(100) < 50){
+                setLocation(getX() - 3, getY());     
+            }  
+            if (Greenfoot.getRandomNumber(100) > 50 &&  Greenfoot.getRandomNumber(100) < 75){
+                setLocation(getX(), getY() + 3);
+            }  
+            if (Greenfoot.getRandomNumber(100) < 75 && Greenfoot.getRandomNumber(100) > 100){
+                setLocation(getX() + 3, getY());
+            }  
+        }
+    }
 }

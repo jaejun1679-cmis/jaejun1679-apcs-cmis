@@ -15,21 +15,17 @@ public class LControl extends Actor
      */
     public void act() 
     {
-        if(Greenfoot.isKeyDown("w")){
-            setRotation(90);
-            move(-3);
+        if (Greenfoot.isKeyDown("w")){
+            setLocation(getX(), getY() - 3);
         }
         if(Greenfoot.isKeyDown("a")){
-            setRotation(0);
-            move(3);            
+           setLocation(getX() - 3, getY());           
         }
         if(Greenfoot.isKeyDown("s")){
-            setRotation(180);
-            move(3);
+            setLocation(getX(), getY() + 3);
         }
         if(Greenfoot.isKeyDown("d")){
-            setRotation(360);
-            move(3);
+            setLocation(getX() + 3, getY());
         }
     }
 }
