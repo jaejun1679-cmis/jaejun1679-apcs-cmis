@@ -16,7 +16,7 @@ public class AIRotate extends Actor
     {
         move(2);
         if (Greenfoot.getRandomNumber(100) < 8){
-            turn(Greenfoot.getRandomNumber(90) - 45);
+            turn(Greenfoot.getRandomNumber(360));
         }
     }    
 }

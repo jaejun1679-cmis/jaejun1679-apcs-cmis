@@ -8,17 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpookySpider extends Actor
 {
-    /**
-     * Act - do whatever the SpookySpider wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private Actor target;
+    
     public void act() 
     {
-        
+        move(2);
+        follow();
     }
     
     public void follow(){
         int targeX = LControl.getX();
-        int targetY = LControl.getY();
+        int targetY = LControl.getY();        
+        
     }
 }

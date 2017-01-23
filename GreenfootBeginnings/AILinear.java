@@ -14,19 +14,24 @@ public class AILinear extends Actor
      */
     public void act() 
     {
-        if (Greenfoot.getRandomNumber(100) < 40){
-            if (Greenfoot.getRandomNumber(100) < 25){
-                setLocation(getX(), getY() - 3);
-            }    
-            if (Greenfoot.getRandomNumber(100) > 25 &&  Greenfoot.getRandomNumber(100) < 50){
-                setLocation(getX() - 3, getY());     
-            }  
-            if (Greenfoot.getRandomNumber(100) > 50 &&  Greenfoot.getRandomNumber(100) < 75){
-                setLocation(getX(), getY() + 3);
-            }  
-            if (Greenfoot.getRandomNumber(100) < 75 && Greenfoot.getRandomNumber(100) > 100){
-                setLocation(getX() + 3, getY());
-            }  
+        int refreshRate = Greenfoot.getRandomNumber(100);
+        int number = Greenfoot.getRandomNumber(100);
+        if (refreshRate < 10){
+            if (number < 25){
+                setLocation(getX(), getY() - 5);
+            }
+            
+            if (number > 26 && number < 50){
+                setLocation(getX() - 5, getY());     
+            }
+            
+            if (number > 51 && number < 75){
+                setLocation(getX(), getY() + 5);
+            }
+            
+            if (number > 76 && number < 101){
+                setLocation(getX() + 5, getY());
+            }
         }
     }
 }
