@@ -10,15 +10,14 @@ public class SpookySpider extends Actor
 {
     private Actor target;
     
-    public void act() 
-    {
+    public void act() {
         move(2);
-        follow();
+        int targetX = getX();
+        int targetY = getY();
+        turnTowards(target.getX(), target.getY());
     }
     
-    public void follow(){
-        int targeX = LControl.getX();
-        int targetY = LControl.getY();        
-        
+    public SpookySpider(Actor target){
+        this.target = target;        
     }
 }

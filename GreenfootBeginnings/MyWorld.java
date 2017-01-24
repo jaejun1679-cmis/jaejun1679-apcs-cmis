@@ -31,7 +31,7 @@ public class MyWorld extends World
         RControl rc1 = new RControl();
         addObject(rc1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
-        SpookySpider spook1 = new SpookySpider(air1);
+        SpookySpider spook1 = new SpookySpider(lc1);
         addObject(spook1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
     }    
 }
