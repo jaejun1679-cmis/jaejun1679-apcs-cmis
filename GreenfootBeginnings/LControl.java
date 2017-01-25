@@ -15,6 +15,7 @@ public class LControl extends Actor
      */
     public void act() 
     {
+        worldEdge();
         if (Greenfoot.isKeyDown("w")){
             setLocation(getX(), getY() - 3);
         }
@@ -26,6 +27,27 @@ public class LControl extends Actor
         }
         if(Greenfoot.isKeyDown("d")){
             setLocation(getX() + 3, getY());
+        } 
+    }
+    
+    public void worldEdge(){
+        int xCor = getX();
+        int yCor = getY();
+        
+        if(xCor == getWorld().getWidth()){
+            setLocation(1, yCor);
+        }
+        
+        if(xCor == 0 ){
+            setLocation(getWorld().getWidth() - 1, yCor);
+        }
+        
+        if(getY() == getWorld().getHeight()){
+            setLocation(xCor, 1);
+        }
+        
+        if ( getY() == 0 ){
+            setLocation(xCor, getWorld().getHeight() - 1);
         }
     }
 }

@@ -19,19 +19,22 @@ public class MyWorld extends World
     
     
     public void populate(){
-        AIRotate air1 = new AIRotate();
+        /*AIRotate air1 = new AIRotate();
         addObject(air1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
         AILinear ail1 = new AILinear();
         addObject(ail1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        */
         
         LControl lc1 = new LControl();
         addObject(lc1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
+        /*
         RControl rc1 = new RControl();
         addObject(rc1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
         SpookySpider spook1 = new SpookySpider(lc1);
         addObject(spook1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        */
     }    
 }
