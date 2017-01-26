@@ -31,23 +31,23 @@ public class LControl extends Actor
     }
     
     public void worldEdge(){
-        int xCor = getX();
-        int yCor = getY();
+        int AxCor = getX();
+        int AyCor = getY();
         
-        if(xCor == getWorld().getWidth()){
-            setLocation(1, yCor);
+        if( AxCor == getWorld().getWidth() - 1 ){
+            setLocation(1, AyCor);
         }
         
-        if(xCor == 0 ){
-            setLocation(getWorld().getWidth() - 1, yCor);
+        if( AxCor == 0 ){
+            setLocation(getWorld().getWidth(), AyCor);
         }
         
-        if(getY() == getWorld().getHeight()){
-            setLocation(xCor, 1);
+        if( AyCor == getWorld().getHeight() - 1 ){
+            setLocation(AxCor, 1);
         }
         
-        if ( getY() == 0 ){
-            setLocation(xCor, getWorld().getHeight() - 1);
+        if( AyCor == 0 ){
+            setLocation(AxCor, getWorld().getHeight() - 1);
         }
     }
 }
