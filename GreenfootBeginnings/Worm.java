@@ -9,25 +9,40 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Worm extends Actor
 {
     private Actor leader;
+  
+    public void act() {
+        move();
+        follow();
+    }
     
-    public void act() 
-    {
+    public void move() {
         move(3);
-        if (Greenfoot.getRandomNumber(100) < 8){
+        if (Greenfoot.getRandomNumber(100) < 8) {
             turn(Greenfoot.getRandomNumber(360));
         }
-        int[][] coordinates = new int [10][10];
-        actLikeAWorm();
-        
+    }
+
+    public void follow() {
+        int targetX = getX();
+        int targetY = getY();
+        turnTowards(leader.getX(), leader.getY());
     }
     
-    public void actLikeAWorm(){
-        int xCor = getX();
-        int yCor = getY();
-        
-        
-        
-        
-    }
-    
+    public Worm(Actor leader){
+        this.leader = leader;
+        Worm worm1 = new Worm();
+        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        Worm worm1 = new Worm();
+        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        Worm worm1 = new Worm();
+        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        Worm worm1 = new Worm();
+        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        Worm worm1 = new Worm();
+        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        Worm worm1 = new Worm();
+        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        Worm worm1 = new Worm();
+        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+    }//constructor
 }

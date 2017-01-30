@@ -36,8 +36,9 @@ public class MyWorld extends World
         SpookySpider spook1 = new SpookySpider(lc1);
         addObject(spook1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
-        Worm worm1 = new Worm();
-        addObject(woem1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         */
+        Worm worm1 = new Worm();
+        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        
     }    
 }
