@@ -37,8 +37,25 @@ public class MyWorld extends World
         addObject(spook1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
         */
-        Worm worm1 = new Worm();
-        addObject(worm1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        Ants ant1 = new Ants();
+        addObject(ant1, 300, 200);
         
+        Ants ant2 = new Ants(ant1);
+        addObject(ant2, 300, 200);
+        
+        Ants ant3 = new Ants(ant2);
+        addObject(ant3, 300, 200);
+        
+        Ants ant4 = new Ants(ant3);
+        addObject(ant4, 300, 200);
+        
+        Ants ant5 = new Ants(ant4);
+        addObject(ant5, 300, 200);
+        
+        Ants ant6 = new Ants(ant5);
+        addObject(ant6, 300, 200);
+        
+        Ants ant7 = new Ants(ant6);
+        addObject(ant7, 300, 200);        
     }    
 }
