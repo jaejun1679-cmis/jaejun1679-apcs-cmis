@@ -5,6 +5,6 @@ comment1.params=
 comment1.target=void\ act()
 comment2.params=
 comment2.target=Ants()
-comment3.params=following
+comment3.params=leader
 comment3.target=Ants(greenfoot.Actor)
 numComments=4

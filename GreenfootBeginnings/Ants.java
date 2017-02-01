@@ -8,13 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ants extends Actor
 {
-    private Actor follower;
+    private Actor leader;
     
     public void act() {
-        move(3);        
-        if (follower.getX() != 0 || follower.getY() != 0) {
-            turnTowards(follower.getX(), follower.getY());
-        }
+        move(3);
+        turnTowards(leader.getX(), leader.getY());
     }
     
     public Ants() {
@@ -24,7 +22,7 @@ public class Ants extends Actor
         }
     }
     
-    public Ants(Actor following){
-        this.follower = follower;
+    public Ants(Actor leader){
+        this.leader = leader;
     }
 }

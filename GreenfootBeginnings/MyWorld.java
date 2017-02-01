@@ -12,7 +12,7 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        setBackground("bluerock.jpg");
+        setBackground("cell.jpg");
         
         populate();       
     }
@@ -25,10 +25,8 @@ public class MyWorld extends World
         AILinear ail1 = new AILinear();
         addObject(ail1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
-        
         LControl lc1 = new LControl();
         addObject(lc1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
-        
         
         RControl rc1 = new RControl();
         addObject(rc1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
@@ -36,9 +34,8 @@ public class MyWorld extends World
         SpookySpider spook1 = new SpookySpider(lc1);
         addObject(spook1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
-        */
         Ants ant1 = new Ants();
-        addObject(ant1, 300, 200);
+        addObject(ant1, 307, 200);
         
         Ants ant2 = new Ants(ant1);
         addObject(ant2, 300, 200);
@@ -56,6 +53,25 @@ public class MyWorld extends World
         addObject(ant6, 300, 200);
         
         Ants ant7 = new Ants(ant6);
-        addObject(ant7, 300, 200);        
+        addObject(ant7, 300, 200);
+        
+        */
+        
+        Alligator alligator1 = new Alligator();
+        addObject(alligator1, 300, 200);
+        
+        Baby baby1 = new Baby();
+        addObject(baby1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        
+        Water water1 = new Water();
+        addObject(water1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        
+        /*
+        if(alligator1  ) {
+            
+            
+        }
+        */
+        
     }    
 }
