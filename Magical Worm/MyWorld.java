@@ -10,7 +10,7 @@ public class MyWorld extends World
         node = new Node(null);
         first = node;
         addObject(node, 300, 200);
-        for (int j = 1; j < 10; j++){
+        for (int j = 1; j < 8; j++){
             node = new Node(node);
             addObject(node, 300, 200);
             last = node;
@@ -19,6 +19,7 @@ public class MyWorld extends World
 
     public void act(){
         String key = Greenfoot.getKey();
+        
         if (key != null){
             if ( key.equals("n")){
                 addNode();
@@ -32,6 +33,8 @@ public class MyWorld extends World
                 removeHead();
             }
         }
+        
+        
     }
 
     public int[] getNewLocation(){
@@ -46,7 +49,7 @@ public class MyWorld extends World
 
     public void addNode(){
         node = new Node(last);
-        if(first == null){
+        if( first == null ){
             first = node;
         }
         int[] loc = getNewLocation();
@@ -55,7 +58,7 @@ public class MyWorld extends World
     }
 
     public void removeNode(){
-        if ( last != null ){
+        if( last != null ){
             removeObject(last);
             last = last.getTarget();
             first = last == null ? null : first;
@@ -65,7 +68,8 @@ public class MyWorld extends World
     public void removeHead(){
         removeObject(first);
         first = null;
-        node = new Node(first);
-        addObject(node, 300, 200);
+        if( node.getTarget() == null ){
+            node.setTarget(null);
+        }        
     }
 }

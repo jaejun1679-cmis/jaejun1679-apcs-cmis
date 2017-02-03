@@ -3,14 +3,12 @@ import java.awt.Color;
 
 public class Node extends Actor
 {
-    
     private Node target;
     private GreenfootImage img;
     
     //Instance variables that change behavior
     private int dir = 0;
     private int spd;
-    private boolean flash ;
     
     //Constants that change behavior
     private final double changeDirProb = 0.8;
@@ -20,7 +18,6 @@ public class Node extends Actor
         img = new GreenfootImage(30,30);
         changeColor();
         setImage(img);
-        flash = false;
         if(target != null){
             spd = target.spd;
         } else {
@@ -28,11 +25,10 @@ public class Node extends Actor
         }
     }
     
-    public void act() 
-    {
+    public void act(){
         moveLeader();
         moveFollower();
-        adjustSpeed();  
+        adjustSpeed();
         if( Math.random() > 0.5 ){
             changeColor();
         }
@@ -75,7 +71,7 @@ public class Node extends Actor
         }
     }
     
-     public boolean isLeader(){
+    public boolean isLeader(){
         return target == null;
     }
     
