@@ -1,19 +1,25 @@
 import greenfoot.*;  
+import java.util.*;
 
 public class MyWorld extends World
 {
     private Node node, first, last;
+    private ArrayList<Node> masterArray = new ArrayList<Node>();
+    
     public MyWorld()
     {
         super(600, 400, 1); 
-
+        
         node = new Node(null);
         first = node;
+        masterArray.add(first);
+        
         addObject(node, 300, 200);
-        for (int j = 1; j < 8; j++){
+        for (int index = 1; index < 8; index++){
             node = new Node(node);
             addObject(node, 300, 200);
             last = node;
+            masterArray.add(last);
         }
     }
 
@@ -66,10 +72,14 @@ public class MyWorld extends World
     }
     
     public void removeHead(){
-        removeObject(first);
-        first = null;
-        if( node.getTarget() == null ){
-            node.setTarget(null);
-        }        
+        masterArray.remove(first); removeObject(first);
+        
+        if(masterArray.contains(node)) {
+            node = new Node(null);
+            masterArray.set(1, node);
+        }
+
+        
+        masterArray.trimToSize();
     }
 }
