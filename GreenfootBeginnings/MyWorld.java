@@ -14,9 +14,8 @@ public class MyWorld extends World
         super(600, 400, 1);
         setBackground("cell.jpg");
         
-        populate();       
+        populate();
     }
-    
     
     public void populate(){
         /*AIRotate air1 = new AIRotate();
@@ -55,7 +54,7 @@ public class MyWorld extends World
         Ants ant7 = new Ants(ant6);
         addObject(ant7, 300, 200);
         
-        */
+        
         
         Alligator alligator1 = new Alligator();
         addObject(alligator1, 300, 200);
@@ -66,12 +65,9 @@ public class MyWorld extends World
         Water water1 = new Water();
         addObject(water1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
         
-        /*
-        if(alligator1  ) {
-            
-            
-        }
-        */
         
+        
+        }
+        */        
     }    
 }
