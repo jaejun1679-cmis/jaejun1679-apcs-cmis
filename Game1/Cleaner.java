@@ -7,13 +7,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Cleaner extends Actor
-{
-    /**
-     * Act - do whatever the Cleaner wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+{   
+    private int speed;
+    
     public void act() 
-    {
-        // Add your action code here.
-    }    
+    {        
+        if (Greenfoot.isKeyDown("w")){
+            move(3);
+            setRotation(270);
+        }
+        if(Greenfoot.isKeyDown("s")){
+            move(3);
+            setRotation(90);
+        }
+        if(Greenfoot.isKeyDown("a")){
+            move(3);
+            setRotation(180);
+        }
+        if(Greenfoot.isKeyDown("d")){
+            move(3);
+            setRotation(0);
+        } 
+    }
 }
