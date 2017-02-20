@@ -12,6 +12,8 @@ public class Alien extends Actor
      * Act - do whatever the Tent wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int counter;
+    
     public void act() 
     {
         move(2);
@@ -20,8 +22,8 @@ public class Alien extends Actor
             turn(Greenfoot.getRandomNumber(360));
         }
     }   
-    
-        public void worldEdge(){
+
+    public void worldEdge(){
         int AxCor = getX();
         int AyCor = getY();
 
@@ -40,5 +42,22 @@ public class Alien extends Actor
         if( AyCor == 0 ){
             setLocation(AxCor, getWorld().getHeight() - 1);
         }
+    }
+
+    public void bloodCounter(){
+        counter = 0;
+        while(counter > 50) {
+            if (counter == 49) {
+                spoutBlood();
+                counter = 0;
+            }
+            counter++;
+        }
+    }
+    
+    public void spoutBlood(){
+        Blood blood = new Blood();
+        //addObject(blood, getX(), getY()); //grennfoot is not working
+        
     }
 }
