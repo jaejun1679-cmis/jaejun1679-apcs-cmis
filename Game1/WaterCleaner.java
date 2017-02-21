@@ -1,20 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Blood here.
+ * Write a description of class WaterCleaner here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Blood extends Actor
+public class WaterCleaner extends Cleaner
 {
     /**
-     * Act - do whatever the Blood wants to do. This method is called whenever
+     * Act - do whatever the WaterCleaner wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    
-    public Blood() {
-        
-    }  
 }

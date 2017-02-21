@@ -7,9 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Cleaner extends Actor
-{   
-    private int speed;
-    
+{       
     public void act() 
     {        
         if (Greenfoot.isKeyDown("w")){
@@ -27,6 +25,15 @@ public class Cleaner extends Actor
         if(Greenfoot.isKeyDown("d")){
             move(3);
             setRotation(0);
-        } 
+        }
+        if(Greenfoot.isKeyDown("q")){
+            change();
+        }
+    }
+    
+    public void change(){
+        
+        
+        
     }
 }

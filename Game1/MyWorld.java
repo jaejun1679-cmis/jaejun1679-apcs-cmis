@@ -16,6 +16,19 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        
+        populate();
+
+    }
+
+    public void populate(){
+        FSM alien1 = new FSM();
+        FSM alien2 = new FSM();
+        WaterCleaner water1 = new WaterCleaner();
+
+        addObject(alien1, Greenfoot.getRandomNumber(400), Greenfoot.getRandomNumber(200));
+        addObject(alien2, alien1.getX(), alien1.getY());
+        addObject(water1, 300, 200);
+
     }
 }
+
