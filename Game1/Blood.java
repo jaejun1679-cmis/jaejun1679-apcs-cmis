@@ -16,5 +16,5 @@ public class Blood extends Actor
     
     public Blood() {
         
-    }  
+    }
 }

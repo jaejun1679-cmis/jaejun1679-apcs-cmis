@@ -8,32 +8,50 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cleaner extends Actor
 {       
+    private int change = 0; 
+
     public void act() 
     {        
-        if (Greenfoot.isKeyDown("w")){
+        if(Greenfoot.isKeyDown("w")){
             move(3);
-            setRotation(270);
-        }
-        if(Greenfoot.isKeyDown("s")){
-            move(3);
-            setRotation(90);
         }
         if(Greenfoot.isKeyDown("a")){
-            move(3);
-            setRotation(180);
+            turn(-3);
+        }
+        if(Greenfoot.isKeyDown("s")){
+            move(-3);
         }
         if(Greenfoot.isKeyDown("d")){
-            move(3);
-            setRotation(0);
+            turn(3);
         }
-        if(Greenfoot.isKeyDown("q")){
-            change();
+        
+        String key = Greenfoot.getKey();
+        if(key != null){
+            if(key.equals("q")){
+                change();
+            }
+        }
+    }
+
+    public void change(){
+        change++; 
+        if (change % 2 == 0) {
+            setImage("pyroFire.png");
+            
+        }
+        if (change % 2 != 0) {
+            setImage("pyroWater.png");
+            
         }
     }
     
-    public void change(){
+    public void clean(){
+        if(this.getImage().equals("pyroFire.png") /* && add touching conditional*/  ){
+            
+        }
         
-        
-        
+        if(this.getImage().equals("pyroWater.png") /* && /*add touching conditional*/) {
+            
+        }        
     }
 }

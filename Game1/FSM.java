@@ -43,20 +43,5 @@ public class FSM extends Actor
         }
     }
 
-        public void bloodCounter(){
-        int counter = 0;
-        while(counter > 50) {
-            if (counter == 49) {
-                spoutBlood();
-                counter = 0;
-            }
-            counter++;
-        }
-    }
-
-    public void spoutBlood(){
-        Blood moreBlood = new Blood();
-        getWorld().addObject(moreBlood, getX(), getY());
-
-    }
+    
 }

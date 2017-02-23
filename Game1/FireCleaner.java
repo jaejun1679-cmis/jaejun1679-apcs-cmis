@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FireCleaner extends Cleaner
+public class FireCleaner extends Actor
 {
     /**
      * Act - do whatever the FireCleaner wants to do. This method is called whenever
@@ -14,6 +14,6 @@ public class FireCleaner extends Cleaner
      */
     public void act() 
     {
-        
+        // Add your action code here.
     }    
 }
