@@ -46,11 +46,11 @@ public class Cleaner extends Actor
     }
     
     public void clean(){
-        if(this.getImage().equals("pyroFire.png") /* && add touching conditional*/  ){
+        if (this.getImage().equals("pyroFire.png") && isTouching(FSM.class)) {
             
         }
         
-        if(this.getImage().equals("pyroWater.png") /* && /*add touching conditional*/) {
+        if (this.getImage().equals("pyroWater.png") && isTouching(Blood.class)) {
             
         }        
     }
