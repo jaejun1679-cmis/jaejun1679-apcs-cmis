@@ -1,13 +1,12 @@
 //make a method that places the values from lowest to highest and you must return the array at the end 
 import java.lang.*;
 public class Bubble{
-    
     public static void main( String[] args ) {
         int[] hello = new int[10];
         for(int index = 0; index < hello.length; index++) {
             hello[index] = (int)(Math.random() * 9 + 1);
         }
-        
+
         for(int index = 0; index < hello.length; index++ ) {
             System.out.print(hello[index]);
         }
@@ -29,7 +28,7 @@ public class Bubble{
                     nums[index] = nums[index + 1];
                     nums[index + 1] = swapper;
                     swap = true;
-                }
+                }//end if
             }//end for
         }//end while
         return nums;
