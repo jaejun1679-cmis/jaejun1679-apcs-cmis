@@ -19,6 +19,12 @@ public class Rat extends Actor
         } else{
             moveTowardCheese(closest);
         }
+        
+        if(eaten == 3) {
+            getWorld().addObject(new Rat(), getX(), getY());
+            eaten = 0;
+        }
+        
         die();
     }   
 
@@ -81,8 +87,7 @@ public class Rat extends Actor
             w.removeObject(cheese);
             eaten++;
         }
-    }
-    
+    }    
     
     public void die(){
         if(isTouching(Trap.class)){

@@ -39,6 +39,14 @@ public class Exterminator extends Actor
         }
     }
 
+    public void touching() {
+        if(isTouching(Exterminator.class)){
+            Exterminator.cheeseCount += 5;
+        }
+        
+        
+    }
+    
     public void die(){
         if(isTouching(Rat.class)){
             MyWorld w = (MyWorld)getWorld();

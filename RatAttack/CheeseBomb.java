@@ -12,11 +12,33 @@ public class CheeseBomb extends Actor
         setImage(img);
         
     }
+    
     public void act() 
     { 
-        if ( timer-- < 0){
-            World w = getWorld();
-            w.removeObject(this);
+        adder(); 
+        touching();
+        
+    }
+    
+    public void adder() {
+        int random = Greenfoot.getRandomNumber(4);
+        timer--;
+        if (timer < 0){
+            if (random == 0 ) {
+                getWorld().addObject(new CheeseBomb(), 10, Greenfoot.getRandomNumber(400));
+            }
+            if (random == 1 ) {
+                getWorld().addObject(new CheeseBomb(), 590, Greenfoot.getRandomNumber(400));
+            }
+            if (random == 2 ) {
+                getWorld().addObject(new CheeseBomb(), Greenfoot.getRandomNumber(600), 10);
+            }
+            if (random == 3 ) {
+                getWorld().addObject(new CheeseBomb(), Greenfoot.getRandomNumber(600), 390);
+            }
+            timer = 1000;
         }
-    }    
+    }
+    
+    
 }

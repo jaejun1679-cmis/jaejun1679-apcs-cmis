@@ -1,11 +1,13 @@
 import greenfoot.*; 
 import java.util.*;
+
 public class MyWorld extends World
 {
     private long startTime;
     private long runningTime;
     private int level = 1;
     private int score = 0;
+
     public MyWorld()
     {
         super(600, 400, 1); 
@@ -23,25 +25,28 @@ public class MyWorld extends World
         addObject(new Exterminator(), 520, 200);
         addObject(new Trap(), 550, 200);
         startTime = System.currentTimeMillis();
-        
+
     }
-    
+
     public void act(){
         runningTime = System.currentTimeMillis() - startTime;
+        double showTime = runningTime/1000.0;
+        int displayTime = (int)(15 -(showTime));
 
         if(getObjects(Rat.class).size() == 0){
             init(level++);
         }
-        showText(score+"  "+(int)(15 -(runningTime/1000.0)), 50, 50);
-
+        
+        showText(score+"  "+ displayTime, 50, 50);
+        if((displayTime == 0)) {
+            addObject(new Rat(), 0, Greenfoot.getRandomNumber(400));
+            startTime = 0;
+        }
     }
-    
 
     public void addCheese(int x, int y){
         addObject(new Cheese(), x, y);
     }
-
-
 
     public void score(){
         score++;
