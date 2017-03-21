@@ -13,10 +13,26 @@ public class Cheese extends Actor
     }
 
     public void act(){
+        freshness--;
+        if(isRotten()) { 
+            MyWorld w = (MyWorld)getWorld();
+            w.removeObject(this);
+        }
+        if(freshness < 500) {
+            img.setColor(Color.green);
+            img.fill();
+            if(freshness < 250) {
+                img.setColor(Color.GREEN.darker());
+                img.fill();
+                if(freshness < 130) {
+                    img.setColor(Color.BLACK);
+                    img.fill();
+                }
+            }
+        }
     }
 
     public boolean isRotten(){
         return freshness < 0;
     }
-
 }

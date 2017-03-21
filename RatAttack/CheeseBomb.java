@@ -4,6 +4,7 @@ import java.awt.Color;
 public class CheeseBomb extends Actor
 {
     private int timer = 1000;
+    
     private GreenfootImage img;
     public CheeseBomb(){
         img = new GreenfootImage(25,25);
@@ -15,15 +16,13 @@ public class CheeseBomb extends Actor
     
     public void act() 
     { 
-        adder(); 
-        touching();
-        
+        adder();
     }
     
     public void adder() {
-        int random = Greenfoot.getRandomNumber(4);
         timer--;
-        if (timer < 0){
+        int random = Greenfoot.getRandomNumber(4);
+        if (timer <= 0){
             if (random == 0 ) {
                 getWorld().addObject(new CheeseBomb(), 10, Greenfoot.getRandomNumber(400));
             }
@@ -39,6 +38,4 @@ public class CheeseBomb extends Actor
             timer = 1000;
         }
     }
-    
-    
 }

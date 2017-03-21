@@ -3,11 +3,16 @@ import java.util.*;
 public class Exterminator extends Actor
 {
     private int cheeseCount;
+    private int life;
+    private int killCount;
     private int delay;
     private boolean haveTrap;
+    
     public Exterminator(){
         haveTrap = true;
         cheeseCount = 5;
+        life = 1;
+        killCount = 0;
         delay = 0;
         getImage().mirrorVertically();
         turn(180);
@@ -38,13 +43,15 @@ public class Exterminator extends Actor
             cheeseCount--;
         }
     }
-
+    
+    public void addKillCount() {
+        killCount++;       
+    }
+    
     public void touching() {
-        if(isTouching(Exterminator.class)){
-            Exterminator.cheeseCount += 5;
+        if(isTouching(CheeseBomb.class)){
+            cheeseCount += 5;
         }
-        
-        
     }
     
     public void die(){
@@ -53,5 +60,4 @@ public class Exterminator extends Actor
             w.lose();
         }
     }
-    
 }

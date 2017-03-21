@@ -7,7 +7,8 @@ public class MyWorld extends World
     private long runningTime;
     private int level = 1;
     private int score = 0;
-
+    private double spawnChance = level * 0.01;
+     
     public MyWorld()
     {
         super(600, 400, 1); 
@@ -25,14 +26,16 @@ public class MyWorld extends World
         addObject(new Exterminator(), 520, 200);
         addObject(new Trap(), 550, 200);
         startTime = System.currentTimeMillis();
-
+        isSpawn();
     }
 
     public void act(){
         runningTime = System.currentTimeMillis() - startTime;
         double showTime = runningTime/1000.0;
         int displayTime = (int)(15 -(showTime));
-
+        
+        List<> ratActors = (Rat)getObjects(Rat.class);
+        
         if(getObjects(Rat.class).size() == 0){
             init(level++);
         }
@@ -55,5 +58,12 @@ public class MyWorld extends World
     public void lose(){
         showText("Game Over!!", 300, 200);
         Greenfoot.stop();
+    }
+    
+    public void isSpawn() {
+        int deter = Greenfoot.getRandomNumber(100) + 1; 
+        if(spawnChance <= deter / 100) {
+            addObject(new RatDisease(), Greenfoot.getRandomNumber(599) + 1, Greenfoot.getRandomNumber(399) + 1);
+        }
     }
 }
