@@ -20,18 +20,20 @@ public class Merge
             left = new int[(length/2)]; 
             right = new int[(length/2)];
             
-             for(int index = 0; index < (length/2); index++) {
+            for(int index = 0; index < (length/2); index++) {
                 left[index] = nums[index];
-            }for(int index = (length/2); index < length; index++) {
+            }
+            for(int index = (length/2); index < length; index++) {
                 right[index] = nums[index];
             }
         } else {
             left = new int[length / 2]; 
             right = new int[(length / 2) + 1];
             
-             for(int index = 0; index < (length/2); index++) {
+            for(int index = 0; index < (length/2); index++) {
                 left[index] = nums[index];
-            }for(int index = (length/2); index < length; index++) {
+            }
+            for(int index = (length/2); index < length; index++) {
                 right[index] = nums[index];
             }
         }
@@ -45,9 +47,15 @@ public class Merge
         return rocks;
     }
 
-    public int[] MergeSplit(int[] nums) {
+    public int[] MergeSort(int[] nums) {
         if(nums.length == 1) {
             return nums;
+        } else {
+            int[][] numsSplit = spilt(nums);
+            int[] left = mergeSort(nums[0]);
+            int[] right = mergeSort(nums[1]);
+            
+                        
         }
         
         return nums;

@@ -4,6 +4,7 @@ public class Cheese extends Actor
 {
     private int freshness;
     private GreenfootImage img;
+    
     public Cheese(){
         img = new GreenfootImage(20, 20);
         img.setColor(Color.yellow);

@@ -14,6 +14,6 @@ public class RatDisease extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        //where the 5 second rule should be coded
     }    
 }

@@ -7,7 +7,7 @@ public class MyWorld extends World
     private long runningTime;
     private int level = 1;
     private int score = 0;
-    private double spawnChance = level * 0.01;
+    private double spawnChance = level * 0.01;//semantic error
      
     public MyWorld()
     {
@@ -34,7 +34,7 @@ public class MyWorld extends World
         double showTime = runningTime/1000.0;
         int displayTime = (int)(15 -(showTime));
         
-        List<> ratActors = (Rat)getObjects(Rat.class);
+        //List<Actors> ratActors = getObjects(Rat.class);
         
         if(getObjects(Rat.class).size() == 0){
             init(level++);

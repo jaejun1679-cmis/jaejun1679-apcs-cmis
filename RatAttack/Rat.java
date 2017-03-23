@@ -4,6 +4,7 @@ public class Rat extends Actor
 {
     private int direction;
     private int eaten;
+    
     public Rat(){
         direction = Greenfoot.getRandomNumber(4);
         getImage().scale(50,25);
@@ -14,6 +15,7 @@ public class Rat extends Actor
     {
         eat();
         Cheese closest = getTargetCheese(200);
+        
         if(closest == null){
             wander();
         } else{
