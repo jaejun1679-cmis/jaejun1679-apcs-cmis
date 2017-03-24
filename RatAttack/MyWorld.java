@@ -43,7 +43,7 @@ public class MyWorld extends World
         showText(score+"  "+ displayTime, 50, 50);
         if((displayTime == 0)) {
             addObject(new Rat(), 0, Greenfoot.getRandomNumber(400));
-            startTime = 0;
+            startTime = 0; //should have System.currentTimeMillis
         }
     }
 

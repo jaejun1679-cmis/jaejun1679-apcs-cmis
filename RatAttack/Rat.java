@@ -73,12 +73,18 @@ public class Rat extends Actor
     
     public Cheese getTargetCheese(int range){
         Cheese target = null;
+        
+        
         List<Cheese> cheeses = getObjectsInRange(range, Cheese.class);
+        
+        
         if (cheeses.size() == 0){
             target = null;
         }else if( cheeses.size() >= 1 ){
             target = cheeses.get(0);
-        } 
+        }
+        
+        
         return target;
     }
     
