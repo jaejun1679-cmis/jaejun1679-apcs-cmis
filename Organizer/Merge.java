@@ -16,6 +16,7 @@ public class Merge
         int length = nums.length;
         int [] left;
         int [] right;
+        
         if(nums.length % 2 == 0 ) {
             left = new int[(length/2)]; 
             right = new int[(length/2)];
@@ -42,22 +43,22 @@ public class Merge
         return returnArrays;
     }
 
-    public int[] Merge() {
-        int[] rocks = new int[5]; //place holder
-        return rocks;
+    public int[] Merge(int[] a, int[] b) {
+        
+        
+        int[] moreReturns = new int[] {a, b};
+        return moreReturns;
     }
 
     public int[] MergeSort(int[] nums) {
         if(nums.length == 1) {
             return nums;
         } else {
-            int[][] numsSplit = spilt(nums);
-            int[] left = mergeSort(nums[0]);
-            int[] right = mergeSort(nums[1]);
-            
-                        
-        }
-        
-        return nums;
+            int[][] numsSplit = Split(nums);
+            int[] left = MergeSort(numsSplit[0]);
+            int[] right = MergeSort(numsSplit[1]);
+
+            return Merge(left, right);
+        }       
     }
 }
