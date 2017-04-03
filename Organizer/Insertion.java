@@ -6,10 +6,9 @@ public class Insertion {
         for(int index = 0; index < hello.length; index++) {
             hello[index] = (int)(Math.random() * 500 + 1);
         }
-        
         for(int index = 0; index < hello.length; index++ ) {
-            System.out.print(hello[index]);
-        }
+            System.out.println(hello[index]);
+        } 
         sort(hello);
         System.out.print("\n");
         for(int index = 0; index < hello.length; index++ ) {
@@ -19,19 +18,55 @@ public class Insertion {
 
     public static int[] sort(int[] nums) {                
         for(int index = 0; index < nums.length - 1; index++ ) {
-            int current = nums[index];
             int next = nums[index + 1];
-            if(current > next) {
+            int current = nums[index];           
+
+            if(next < current) {
+                
+                
                 int swapper = current;
-                int cycle = index;
-                boolean stopper = true;
-                while(stopper && nums[cycle] > next) {
-                    if(nums[cycle] < nums[index]) {
-                        cycle--;
-                    }
-                } 
-            }            
-        }        
-        return nums;
-    }//end sort
-}//end main
+                int stopper = 0;
+                int index2 = index - 1;
+
+                while(nums[index] < nums[index2]) {
+                        
+                }
+                index2--; 
+
+            }
+
+                
+            /*
+            for(int index2 = index - 1; index2 <= 0; index2--) {
+            if (current > nums[index2] ) { 
+            nums[index2] = next;
+
+            } else { 
+
+            }
+            nums[index + 1] = swapper;
+            }
+             */
+
+            /*
+            int swapper = current;
+            int cycle = index;
+            boolean stopper = true;
+            while(stopper && nums[cycle] > next) {
+            if(nums[cycle] < nums[index]) {
+            cycle--;
+            } else {
+            for(int index3 = 0; index3 < cycle; index3++) {
+
+            }
+
+            }
+            } 
+
+             */
+
+        }
+
+    }        
+    return nums;
+}
