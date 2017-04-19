@@ -1,9 +1,10 @@
 import java.lang.*;
 public class Binary {
     public static void main( String[] args ) {
-        int[] hello = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] hello = new int[] {10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
 
-        find(hello, 8);        
+        int answer = find(hello, 14);
+        System.out.println(answer);
     }//end main
 
     public static int find(int[] nums, int target) {  
@@ -17,14 +18,10 @@ public class Binary {
                 run = false;
                 return half; // does this automatically stop the loop?
             } else if (current < target ) {
-                half = half + (half / 2); 
-                
+                half = ( half + (half / 2) ) / 2;                 
             } else if (current > target ) { 
-                half = half / 2;
-                
+                half = half / 2;                
             }
-
-            
         }
         return -1;
     }
