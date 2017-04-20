@@ -18,9 +18,9 @@ public class Binary {
                 run = false;
                 return half; // does this automatically stop the loop?
             } else if (current < target ) {
-                half = ( half + (half / 2) ) / 2;                 
+                half = ( half + (half / 2) ) / 2;
             } else if (current > target ) { 
-                half = half / 2;                
+                half = half / 2;
             }
         }
         return -1;
