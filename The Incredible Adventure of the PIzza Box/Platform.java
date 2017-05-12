@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.Color;
 
-/**
- * Write a description of class Platform here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Platform extends Actor
 {
-    /**
-     * Act - do whatever the Platform wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
+    private GreenfootImage img;
+    
+    public Platform() {
+        img = new GreenfootImage(700, 20);
+        img.setColor(new Color(0, 0, 0));
+        img.fill();
+        setImage(img);
+    
+    }
+       
+    public void act() {
         // Add your action code here.
     }    
 }

@@ -1,12 +1,13 @@
 #BlueJ class context
 comment0.target=PizzaBox
-comment0.text=\n\ Write\ a\ description\ of\ class\ PIzzaBox\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=PizzaBox()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ controls()
+comment3.target=void\ move()
 comment4.params=
 comment4.target=void\ jump()
-numComments=5
+comment5.params=
+comment5.target=void\ endWorld()
+numComments=6

@@ -1,0 +1,9 @@
+import java.lang.*;
+
+public interface Behavior
+{
+    public void endWorld();
+    public void move();
+    
+    
+}

@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MyWorld extends World
 {
     public MyWorld() {    
@@ -18,7 +12,10 @@ public class MyWorld extends World
     
     public void populate() {
         PizzaBox pizzaBox = new PizzaBox();
-        addObject(pizzaBox, 60, 370);
+        addObject(pizzaBox, 60, 350);
+        
+        Platform platform = new Platform();
+        addObject(platform, 300, 395);
     }
 
     public void dead() {
