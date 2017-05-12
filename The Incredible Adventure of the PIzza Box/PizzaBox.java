@@ -16,15 +16,19 @@ public class PizzaBox extends Actor implements Behavior
         setImage(img);
     }
     
-    public void act()
-    {
+    public void act() {
+        
         move();
     }
     
     public void move() {
+        gravity++;
+        
+        
         if (Greenfoot.isKeyDown("w")){
-            jump();
+            
         }
+        
         if(Greenfoot.isKeyDown("a")){
            setLocation(getX() - 2, getY());           
         }
@@ -35,10 +39,7 @@ public class PizzaBox extends Actor implements Behavior
             setLocation(getX() + 2, getY());
         } 
     }
-    
-    public void jump() {
-        
-    }
+
     
     public void endWorld() { 
         int AxCor = getX();
