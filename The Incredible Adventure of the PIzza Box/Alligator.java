@@ -11,7 +11,11 @@ public class Alligator extends Enemy implements Behavior
 
     }
 
-    public void endWorld() {
-
-    }    
+    public void die() {
+        if( getY() == getWorld().getHeight() - 1 ){
+            getWorld().removeObject(this);
+        }
+    }
+    
+    
 }

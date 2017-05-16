@@ -4,8 +4,8 @@ import java.awt.Color;
 public class PizzaBox extends Actor implements Behavior
 {
     private GreenfootImage img;
-    private int speed;
-    private int life; 
+    private int speed; //create getter
+    private int health; //create getter
     private int rocket;
     private int gravity;
         
@@ -17,15 +17,14 @@ public class PizzaBox extends Actor implements Behavior
     }
     
     public void act() {
-        
+        die();
         move();
     }
     
     public void move() {
         gravity++;
         
-        
-        if (Greenfoot.isKeyDown("w")){
+                if (Greenfoot.isKeyDown("w")){
             
         }
         
@@ -40,25 +39,9 @@ public class PizzaBox extends Actor implements Behavior
         } 
     }
 
-    
-    public void endWorld() { 
-        int AxCor = getX();
-        int AyCor = getY();
-        
-        if( AxCor == getWorld().getWidth() - 1 ){
-            setLocation(1, AyCor);
+    public void die() { 
+        if( getY() == getWorld().getHeight() - 1 ){
+            getWorld().removeObject(this);
         }
-        
-        if( AxCor == 0 ){
-            setLocation(getWorld().getWidth(), AyCor);
-        }
-        
-        if( AyCor == getWorld().getHeight() - 1 ){
-            setLocation(AxCor, 1);
-        }
-        
-        if( AyCor == 0 ){
-            setLocation(AxCor, getWorld().getHeight() - 1);
-        }
-    }
+    }    
 }

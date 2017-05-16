@@ -4,8 +4,9 @@ public class MyWorld extends World
 {
     public MyWorld() {    
         super(600, 400, 1);
+        
         populate();
-        dead();
+        
 
         
     }
@@ -16,10 +17,14 @@ public class MyWorld extends World
         
         Platform platform = new Platform();
         addObject(platform, 300, 395);
-    }
-
-    public void dead() {
+        
+        int x = Greenfoot.getRandomNumber(100);
+        
+        if(x < 3) {
+            Sheep sheep1 = new Sheep(pizzaBox); 
+            addObject(sheep1, Greenfoot.getRandomNumber(400),0);
+        }
         
     }
-
+    
 }

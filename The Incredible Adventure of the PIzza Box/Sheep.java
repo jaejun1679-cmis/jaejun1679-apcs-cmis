@@ -2,16 +2,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Sheep extends Enemy implements Behavior
 {
-    public void act() 
-    {
+    private Actor target;
+    public Sheep(Actor target) {
+        this.target = target;
+    }
+
+    public void move() {
+        move(2);
+        turnTowards(target.getX(), target.getY());
+    }
+
+    public void die() {
+        if( getY() == getWorld().getHeight() - 1 ){
+            getWorld().removeObject(this);
+        }
+    }    
+
+    public void act() {
         move();
     }
-    
-    public void move() {
-        
-    }
-    
-    public void endWorld() {
-        
-    }  
 }

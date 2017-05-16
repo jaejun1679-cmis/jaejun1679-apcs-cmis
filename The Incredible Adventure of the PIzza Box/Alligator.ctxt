@@ -5,5 +5,5 @@ comment1.target=void\ act()
 comment2.params=
 comment2.target=void\ move()
 comment3.params=
-comment3.target=void\ endWorld()
+comment3.target=void\ die()
 numComments=4

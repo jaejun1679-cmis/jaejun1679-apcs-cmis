@@ -2,8 +2,8 @@ import java.lang.*;
 
 public interface Behavior
 {
-    public void endWorld();
+    public void die();
+
     public void move();
-    
-    
+
 }
