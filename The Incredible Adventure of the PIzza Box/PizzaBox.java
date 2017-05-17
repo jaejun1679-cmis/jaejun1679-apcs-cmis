@@ -8,28 +8,28 @@ public class PizzaBox extends Actor implements Behavior
     private int health; //create getter
     private int rocket;
     private int gravity;
-        
+
     public PizzaBox() {
         img = new GreenfootImage(15, 15);
         img.setColor(new Color(222,184,135));
         img.fill();
         setImage(img);
     }
-    
+
     public void act() {
         die();
         move();
     }
-    
+
     public void move() {
         gravity++;
-        
-                if (Greenfoot.isKeyDown("w")){
-            
+
+        if (Greenfoot.isKeyDown("w")){
+
         }
-        
+
         if(Greenfoot.isKeyDown("a")){
-           setLocation(getX() - 2, getY());           
+            setLocation(getX() - 2, getY());           
         }
         if(Greenfoot.isKeyDown("s")){
             setLocation(getX(), getY() + 2);
@@ -43,5 +43,21 @@ public class PizzaBox extends Actor implements Behavior
         if( getY() == getWorld().getHeight() - 1 ){
             getWorld().removeObject(this);
         }
-    }    
+    }
+    
+    public int getSpeed() {
+        return speed; 
+    }
+    
+    public void setSpeed(int change) { 
+        speed += change;
+    }
+    
+    public int getHealth() {
+        return health; 
+    }
+    
+    public void setHealth(int change) {
+        health += change;
+    }
 }

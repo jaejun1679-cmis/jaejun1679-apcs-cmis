@@ -5,6 +5,7 @@ public class PIzza extends Enemy implements Behavior
     public void act() 
     {
         move();
+        kill();
     }
     
     public void move() {
