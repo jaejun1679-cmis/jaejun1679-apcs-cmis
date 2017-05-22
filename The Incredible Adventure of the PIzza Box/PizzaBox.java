@@ -7,8 +7,8 @@ public class PizzaBox extends Actor implements Behavior
     private int speed; //create getter
     private int health; //create getter
     private int rocket;
-    private int gravity;
-
+    private int gravity;    
+    
     public PizzaBox() {
         img = new GreenfootImage(15, 15);
         img.setColor(new Color(222,184,135));
@@ -43,6 +43,11 @@ public class PizzaBox extends Actor implements Behavior
         if( getY() == getWorld().getHeight() - 1 ){
             getWorld().removeObject(this);
         }
+    }
+    
+    public void useItems() {
+        
+        
     }
     
     public int getSpeed() {

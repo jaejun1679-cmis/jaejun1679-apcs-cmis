@@ -6,8 +6,10 @@ public abstract class Enemy extends Actor
         Actor PizzaBox;
         PizzaBox = getOneObjectAtOffset(0, 0, PizzaBox.class);
         if(PizzaBox != null) {
-            World world = getWorld();
+            World world;
+            world = getWorld();
             world.removeObject(PizzaBox);
         }
     }
+    
 }

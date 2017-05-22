@@ -8,9 +8,6 @@ public class Health extends Item
         setImage(image);
     }
     
-    public void effect() {
-        health++;
-    }
     
     public void act() {
         

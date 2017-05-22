@@ -4,7 +4,7 @@ public class Sheep extends Enemy implements Behavior
 {
     private Actor target;
     private int locate;
-    
+
     public Sheep(Actor target) {
         this.target = target;
         locate = target.getX();
@@ -13,21 +13,22 @@ public class Sheep extends Enemy implements Behavior
     public void move() {
         move(2);       
         turnTowards(locate, target.getY());
-        die();
+
     }
 
     public void die() {
         if( getY() == getWorld().getHeight() - 1 ){
             getWorld().removeObject(this);
         }
-        
+
         if (getX() == locate ) {
             getWorld().removeObject(this);
         }
-    }    
+    }
 
     public void act() {
         move();
         kill();
+        die();
     }
 }

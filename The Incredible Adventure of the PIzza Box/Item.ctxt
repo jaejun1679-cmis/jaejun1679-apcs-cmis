@@ -1,9 +1,7 @@
 #BlueJ class context
 comment0.target=Item
 comment1.params=
-comment1.target=void\ effect()
+comment1.target=int\ getUse()
 comment2.params=
-comment2.target=int\ getUse()
-comment3.params=
-comment3.target=void\ usedItem()
-numComments=4
+comment2.target=void\ usedItem()
+numComments=3

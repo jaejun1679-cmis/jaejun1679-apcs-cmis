@@ -28,18 +28,16 @@ public class MyWorld extends World
     }
     
     public void spawnEnemies() {
-        spawnChance = Greenfoot.getRandomNumber(100) + increaseChances;
+        spawnChance = Greenfoot.getRandomNumber(100);
         System.out.println(spawnChance);
-        if(spawnChance > 99) {
+        
+        if(spawnChance < 2) {
             addObject(new Sheep(mainCharacter), Greenfoot.getRandomNumber(500),50);
-            increaseChances = 0;
         }
 
-        increaseChances++;
     }
 
     public void spawnItems() {
-
+        
     }
-
 }

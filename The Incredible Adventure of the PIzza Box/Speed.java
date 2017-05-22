@@ -7,10 +7,7 @@ public class Speed extends Item
         image.scale(image.getWidth() - 20, image.getHeight() - 20);
         setImage(image);
     }
-        
-    public void effect() {
-        speed++;
-    }
+    
     
     public void act() {
         
