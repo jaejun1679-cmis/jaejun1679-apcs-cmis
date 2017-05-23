@@ -8,10 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cleaner extends Actor
 {       
-    private int ticker = 0; 
-
-    public void act() 
-    {        
+    public void move() {
         if(Greenfoot.isKeyDown("w")){
             move(3);
         }
@@ -24,37 +21,5 @@ public class Cleaner extends Actor
         if(Greenfoot.isKeyDown("d")){
             turn(3);
         }
-
-        String key = Greenfoot.getKey();
-        if(key != null){
-            if(key.equals("q")){
-                ticker();
-            }
-        }
-        clean();
-    }
-
-    public void ticker(){
-        ticker++;
-        if (ticker % 2 == 0) {
-            setImage("pyroFire.png");
-        }
-        if (ticker % 2 != 0) {
-            setImage("pyroWater.png");
-        }
-    }
-
-    public void clean(){
-        if (this.getImage().equals("pyroFire.png") && isTouching(FSM.class)) {
-            if (Blood.class !=  null) {
-                getWorld().removeObjects(getWorld().getObjects(FSM.class));
-            }
-        }
-
-        if (this.getImage().equals("pyroWater.png") && isTouching(Blood.class)) {
-            if (Blood.class !=  null) {
-                getWorld().removeObjects(getWorld().getObjects(Blood.class));
-            }
-        }  
     }
 }

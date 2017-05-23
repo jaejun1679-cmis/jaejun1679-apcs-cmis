@@ -8,11 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class FSM extends Actor
 {
-    /**
-     * Act - do whatever the Tent wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     *
-    */
+    private int counter = 0;
+    private Actor killer; 
+
     public void act() 
     {
         move(2);
@@ -20,6 +18,7 @@ public class FSM extends Actor
         if (Greenfoot.getRandomNumber(100) < 3){
             turn(Greenfoot.getRandomNumber(360));
         }
+        bloodCounter();
     }   
 
     public void worldEdge(){
@@ -43,5 +42,21 @@ public class FSM extends Actor
         }
     }
 
-    
+    public void bloodCounter() {
+        if (counter == 5000) {
+            spoutBlood();
+            counter = 0;
+        }
+        counter++;
+    }
+
+    public void spoutBlood(){
+        getWorld().addObject(new Blood(), getX(), getY());
+    }
+
+    public void die(){
+        if(isTouching(Fcleaner)){
+            getWorld().removeObject(this);
+        }
+    }
 }
