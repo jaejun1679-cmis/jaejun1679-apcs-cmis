@@ -1,9 +1,11 @@
 #BlueJ class context
 comment0.target=Alligator
 comment1.params=
-comment1.target=void\ act()
+comment1.target=Alligator()
 comment2.params=
-comment2.target=void\ move()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ die()
-numComments=4
+comment3.target=void\ move()
+comment4.params=
+comment4.target=void\ die()
+numComments=5

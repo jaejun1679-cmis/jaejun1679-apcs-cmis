@@ -7,7 +7,8 @@ public class PizzaBox extends Actor implements Behavior
     private int speed; //create getter
     private int health; //create getter
     private int rocket;
-    private int gravity;    
+    private int gravity;
+    
     
     public PizzaBox() {
         img = new GreenfootImage(15, 15);
@@ -65,4 +66,6 @@ public class PizzaBox extends Actor implements Behavior
     public void setHealth(int change) {
         health += change;
     }
+    
+
 }
