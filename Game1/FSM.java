@@ -55,7 +55,7 @@ public class FSM extends Actor
     }
 
     public void die(){
-        if(isTouching(Fcleaner)){
+        if(isTouching(Cleaner.class)){
             getWorld().removeObject(this);
         }
     }
