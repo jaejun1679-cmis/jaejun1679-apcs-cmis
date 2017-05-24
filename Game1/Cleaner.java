@@ -2,11 +2,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)(
 
 public class Cleaner extends Actor
 {       
-    private boolean mode = false;
+    private boolean mode;
 
     public void act() {
         move();
         change();
+        cleanse();
     }
 
     public void move() {
@@ -40,17 +41,22 @@ public class Cleaner extends Actor
     }    
 
     public void cleanse() {
-        Actor found = getOneIntersectingObject(null); 
-
-        if(found != null ) {
-            if ((mode = false) && (isTouching(FSM.class) ) ) {
-                removeTouching(null);
-
+        Actor foundFSM = getOneIntersectingObject(FSM.class);
+        Actor foundBlood = getOneIntersectingObject(Blood.class);
+        
+        if(foundFSM != null || foundBlood != null ) {
+            if ((mode == false) && (isTouching(FSM.class) ) ) {
+                getWorld().removeObject(foundFSM);
+                MyWorld myWorld = (MyWorld) getWorld();
+                FSMCounter counterA = myWorld.getMonsterCounter();
+                counterA.changeCount(1);
             } 
 
-            if ((mode = true) && (isTouching(Blood.class) ) ) {
-                removeTouching(null);
-
+            if ((mode == true) && (isTouching(Blood.class) ) ) {
+                getWorld().removeObject(foundBlood);
+                MyWorld myWorld = (MyWorld) getWorld();
+                BloodCounter counterB = myWorld.getBloodCounter();
+                counterB.changeCount(1);
             }
 
         }

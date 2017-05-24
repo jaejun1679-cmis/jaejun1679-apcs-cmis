@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Tent here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class FSM extends Actor
 {
     private int counter = 0;
@@ -19,6 +13,7 @@ public class FSM extends Actor
             turn(Greenfoot.getRandomNumber(360));
         }
         bloodCounter();
+        counter++;
     }   
 
     public void worldEdge(){
@@ -43,20 +38,13 @@ public class FSM extends Actor
     }
 
     public void bloodCounter() {
-        if (counter == 5000) {
+        if (counter == 5) {
             spoutBlood();
             counter = 0;
         }
-        counter++;
     }
 
-    public void spoutBlood(){
+    public void spoutBlood() {
         getWorld().addObject(new Blood(), getX(), getY());
-    }
-
-    public void die(){
-        if(isTouching(Cleaner.class)){
-            getWorld().removeObject(this);
-        }
     }
 }
