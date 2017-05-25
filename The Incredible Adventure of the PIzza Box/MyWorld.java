@@ -29,17 +29,22 @@ public class MyWorld extends World
     
     public void spawnEnemies() {
         spawnChance = Greenfoot.getRandomNumber(1000);
-        if(spawnChance < 3) {
-            addObject(new Pizza(), Greenfoot.getRandomNumber(500),50);
+        
+        
+        if(spawnChance < 30) {
+            addObject(new Pizza(), Greenfoot.getRandomNumber(500), 50);
         }
         
+        /*
         if(spawnChance < 50) {
             addObject(new Alligator(), 500, 300);
         }
         
+        
         if(spawnChance < 20) {
             addObject(new Sheep(mainCharacter), Greenfoot.getRandomNumber(500),50);
         }
+        */
         
         
 

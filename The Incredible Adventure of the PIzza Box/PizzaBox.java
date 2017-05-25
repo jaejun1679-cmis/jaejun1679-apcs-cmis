@@ -26,7 +26,7 @@ public class PizzaBox extends Actor implements Behavior
         gravity++;
 
         if (Greenfoot.isKeyDown("w")){
-
+            
         }
 
         if(Greenfoot.isKeyDown("a")){

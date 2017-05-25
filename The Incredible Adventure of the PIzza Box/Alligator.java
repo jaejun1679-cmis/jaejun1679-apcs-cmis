@@ -3,8 +3,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Alligator extends Enemy implements Behavior
 {
     private final long check = System.currentTimeMillis();
-    private int deter;
-    private boolean swap;
 
     public Alligator () {
         GreenfootImage image = getImage();
@@ -19,22 +17,10 @@ public class Alligator extends Enemy implements Behavior
 
     public void move() {
 
-        if (deter < 1000 ) {
-            if (swap) { 
-                setLocation(getX() - 3, getY());
-                
-                
-            } else if (swap) {
-                setLocation(getX() + 3, getY());
-                
-                
-            }
-            
-        }
+        setLocation(getX() - 3, getY());
 
-        deter++;
     }
-
+    
     public void die() {
         if( getY() == getWorld().getHeight() - 1 ){
             getWorld().removeObject(this);
