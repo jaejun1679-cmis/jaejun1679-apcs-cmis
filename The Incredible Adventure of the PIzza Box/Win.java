@@ -5,8 +5,7 @@ import java.awt.Color;
 
 public class Win extends World
 {
-    public Win()
-    {    
+    public Win() {    
         super(600, 400, 1);
-    }
+    }   
 }

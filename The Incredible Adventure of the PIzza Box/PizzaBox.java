@@ -6,13 +6,14 @@ public class PizzaBox extends Actor implements Behavior
 {
     private GreenfootImage img;
     private int speed = 6;
-    private int health = 1;
     private int rocket;
     private int gravity;
     private int timesJumped = 0;
     private int faster = 1;
     private boolean isJump;
+    private int boost = 11;
     private ArrayList<Pepperoni> inventory = new ArrayList<Pepperoni>();
+    private int score;
 
     public PizzaBox() {
         img = new GreenfootImage(15, 15);
@@ -29,7 +30,8 @@ public class PizzaBox extends Actor implements Behavior
         above();
         foundPepperoni();
         useSpeed();
-        useHealth();
+        useBoost();
+        calculate();
     }
 
     public void move() {
@@ -100,7 +102,7 @@ public class PizzaBox extends Actor implements Behavior
     }
 
     public void jump() {
-        gravity -= 15;
+        gravity -= boost;
         isJump = true;
     }
 
@@ -127,18 +129,17 @@ public class PizzaBox extends Actor implements Behavior
         Actor foundSpeed = getOneIntersectingObject(Speed.class);
         if( foundSpeed != null ) {
             getWorld().removeObject(foundSpeed);
+            setSpeed(2);
         }
 
-        setSpeed(2);
     }
 
-    public void useHealth() {
-        Actor foundHealth = getOneIntersectingObject(Health.class);
-        if( foundHealth != null ) {
-            getWorld().removeObject(foundHealth);
+    public void useBoost() {
+        Actor foundBoost = getOneIntersectingObject(Boost.class);
+        if( foundBoost != null ) {
+            getWorld().removeObject(foundBoost);
+            setBoost(3);
         }
-
-        setHealth(1);
     }
 
     public int getSpeed() {
@@ -149,15 +150,30 @@ public class PizzaBox extends Actor implements Behavior
         speed += change;
     }
 
-    public int getHealth() {
-        return health; 
+    public int getBoost() {
+        return boost; 
     }
 
     public int getPepperoniCount() {
         return inventory.size();
     }
 
-    public void setHealth(int change) {
-        health += change;
+    public void setBoost(int change) {
+        boost += change;
     }
+
+    public void calculate() {
+        
+        MyWorld myWorld = (MyWorld) getWorld();
+        Score counter = myWorld.getScore();
+        counter.changeScore(1);
+        for(Pepperoni pep : inventory ){
+            counter.changeScore(1000);         
+        }
+    }
+
+    public int getSCore() {
+        return score; 
+    }
+
 }

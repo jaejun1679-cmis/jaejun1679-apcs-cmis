@@ -9,31 +9,25 @@ public class Pizza extends Enemy implements Behavior
     private int happen = 0;
 
     public Pizza() {
-        
+        GreenfootImage image = getImage();
+        image.scale(image.getWidth() - 25, image.getHeight() - 20);
+        setImage(image);
     }
     
     public void act() {
         move();
         kill();
+        die();
     }
 
     public void move() {
-        Greenfoot.getRandomNumber(10000);
-
-        if( ticker < 20 ) {
-            setLocation(Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
-            happen++;
-            
-        }
-        
+        setLocation(getX() - 4, getY());
     }
 
     public void die() {
         if( getY() == getWorld().getHeight() - 1 ){
             getWorld().removeObject(this);
-        }
-                
-        if ( happen == 3 ) {
+        } else if (getX() == 10) {
             getWorld().removeObject(this);
         }
     }
