@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 
-public class JumpCounter extends Actor
+public class JumpCounter extends Counters
 {
     private int timesJumped = 0;
     

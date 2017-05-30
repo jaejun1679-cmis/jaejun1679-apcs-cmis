@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Alligator extends Enemy implements Behavior
+public class LeftAlligator extends Enemy implements Behavior
 {
     private final long check = System.currentTimeMillis();
 
-    public Alligator () {
+    public LeftAlligator() {
         GreenfootImage image = getImage();
         image.scale(image.getWidth() - 15, image.getHeight() - 10);
         setImage(image);
@@ -16,7 +16,7 @@ public class Alligator extends Enemy implements Behavior
     }
 
     public void move() {
-
+        
         setLocation(getX() - 3, getY());
 
     }

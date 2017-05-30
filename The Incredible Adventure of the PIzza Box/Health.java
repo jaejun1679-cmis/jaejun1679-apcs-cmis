@@ -9,7 +9,4 @@ public class Health extends Item
     }
     
     
-    public void act() {
-        
-    }    
 }

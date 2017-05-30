@@ -8,9 +8,7 @@ public class Speed extends Item
         setImage(image);
     }
     
-    
-    public void act() {
-        
-        
-    }
+     public void action() {
+       
+    } 
 }

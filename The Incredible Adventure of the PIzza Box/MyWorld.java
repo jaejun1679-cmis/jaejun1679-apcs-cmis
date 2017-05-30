@@ -6,6 +6,7 @@ public class MyWorld extends World
     private int increaseChances = 0;
     private PizzaBox mainCharacter; 
     JumpCounter jumpman = new JumpCounter();
+    PepCounter pepman = new PepCounter();
 
     public MyWorld() {    
         super(600, 400, 1);
@@ -24,13 +25,19 @@ public class MyWorld extends World
         addObject(pizzaBox, 60, 350);
 
         Platform platform = new Platform();
-        addObject(platform, 300, 393);
+        addObject(platform, 60, 390);
+        
         addObject(jumpman,70, 25);
+        addObject(pepman, 70, 40);
     }
     
     public JumpCounter getJumpCounter() {
-        return jumpman; 
-    } 
+        return jumpman;
+    }
+    
+    public PepCounter getPepCounter() {
+        return pepman;
+    }
 
     public void spawnEnemies() {
         spawnChance = Greenfoot.getRandomNumber(1000);
